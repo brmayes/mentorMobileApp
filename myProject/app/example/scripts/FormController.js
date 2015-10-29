@@ -32,7 +32,8 @@ $scope.logFormParse = function(logForm) {
   var currentUser = Parse.User.current();
   var username = $scope.userName;
   var password = $scope.userPass;
-  alert(username + password);
+  var email = $scope.userEmail;
+
 
 
       Parse.User.logIn(username, password, {
