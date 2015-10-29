@@ -10,15 +10,16 @@ module.exports =
         #   location: "example#getting-started"
         # }
     {
+      title: "Profile"
+      id: "profile"
+      location: "example#profile"
+    }
+    {
       title: "Home"
       id: "home"
       location: "example#home" # Supersonic module#view type navigation
     }
-    {
-      title: "Profiles"
-      id: "profiles"
-      location: "example#settings"
-    }
+
     {
       title: "Calendar"
       id: "calendar"

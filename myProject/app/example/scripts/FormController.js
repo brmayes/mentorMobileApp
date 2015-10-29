@@ -44,7 +44,8 @@ angular
           success: function(user) {
             // Do stuff after successful login.
             alert("Success!");
-            //supersonic.ui.layers.replace("home");
+            supersonic.ui.modal.hide();
+            // alert("WHY WON'T IT HIDE")
           },
           error: function(user, error) {
             // The login failed. Check error to see why.
@@ -56,25 +57,43 @@ angular
 
     //LOG OUT BUTTON FUNCTION
     $scope.logOut = function(logOutButton){
-        alert("log out stared")
-        Parse.User.logOut();
-        alert("You have successfully been logged out.")
-        var currentUser = Parse.User.current();  // this will now be null
-        var afterLogOut = new supersonic.ui.View("example#getting-started")
-        supersonic.ui.layers.push(gettingStarted);
+      alert("log out function opened");
+      Parse.User.logOut();
+      var currentUser = Parse.User.current();  // this will now be null
+      alert("log out function run");
+
+      var modalView = new supersonic.ui.View("example#getting-started");
+      var options = {
+        animate: true
+      }
+
+      supersonic.ui.modal.show(modalView, options);
+
+
+      // Parse.User.logOut({
+      //   alert("log out started");
+      //   success: function(user) {
+      //     // Do stuff after successful login.
+      //     alert("You have been successfully logged out!");
+      //     var currentUser = Parse.User.current();
+      //     // supersonic.ui.modal.hide();
+      //     // alert("WHY WON'T IT HIDE")
+      //   },
+      //   error: function(user, error) {
+      //     // The login failed. Check error to see why.
+      //     //alert("Error: " + error.code + " " + error.message);
+      //     alert("Error!");
+      //   }
+      // });
+
+        // alert("log out stared")
+        // Parse.User.logOut();
+        // alert("You have successfully been logged out.")
+        // var currentUser = Parse.User.current();  // this will now be null
+        // var afterLogOut = new supersonic.ui.View("example#getting-started")
+        // supersonic.ui.layers.push(gettingStarted);
     };
 
-    // //GETTING STARTED
-    // $scope.gettingStartedView = function(gettingStartedView){
-    //
-    //   var gettingStarted = new supersonic.ui.View("example#getting-started")
-    //
-    //   options = {
-    //       overrideBackButton: true,
-    //   }
-    // }
-    //
-    // supersonic.ui.navigationBar.update(options);
 
 
   });
