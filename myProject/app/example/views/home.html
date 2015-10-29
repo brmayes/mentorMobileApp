@@ -2,24 +2,40 @@
 
   <super-navbar>
     <super-navbar-title>
-      Super Cool App Name
+      Home
     </super-navbar-title>
   </super-navbar>
 
-  <p>Awesome! This file is located at <strong>app/example/views/getting-started.html</strong> &mdash; open it, change some text and save the file. The changes are updated to all connected devices. Cool, huh?</p>
+  <script>
+  //CHOOSING HOME VS. MODAL LOG IN SCREEN
+    var currentUser = Parse.User.current();
+      if (currentUser) {
+          // do stuff with the user
+          supersonic.ui.View("example#home");
+      } else {
+          // show the signup or login page
+          //alert("need to log in");
 
-  <p>Below, you can see our multi-page navigation in action. Tap on a button to move to a new view.</p>
+          var modalView = new supersonic.ui.View("example#getting-started");
+          var options = {
+          animate: true
+          }
 
-  <super-navigate view-id="using-the-scanner">
-    <button class="button button-block button-positive icon-left super-wand">Using the AppGyver Scanner</button>
-  </super-navigate>
+          supersonic.ui.modal.show(modalView, options);
+      }
 
-  <super-navigate view-id="learn-more">
-    <button class="button button-block button-positive icon-left super-university">Learn more</button>
-  </super-navigate>
 
-  <h2>Get in touch with us!</h2>
 
-  <p>Feel free to contact us at <a href="mailto:contact@appgyver.com">contact@appgyver.com</a>, we would love to get your feedback!</p>
+
+  </script>
+
+
+ <h1>Logout</h1>
+
+ <div ng-controller="FormController">
+   <super-navigate view-id="getting-started">
+     <button ng-click="logOut()">Push Me</button>
+   </super-navigate>
+ </div>
 
 </div>

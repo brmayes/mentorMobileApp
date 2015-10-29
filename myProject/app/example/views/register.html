@@ -13,22 +13,26 @@
 
 
     <form name="newUserForm">
-      <div class="form-group">
-        <label class="item item-input" for="userName">
+      <div class="form-group list">
+        <label class="item item-input item-stacked-label" for="userName">
+          <span class="input-label">Full Name</span>
           <input type="text" placeholder="First and Last Name" name="userName" ng-model="userName" class="form-control" required />
         </label>
-        <label class="item item-input" for="userEmail">
-          <input type="text" placeholder="Email Address" name="userEmail" ng-model="userEmail" class="form-control" required />
+        <label class="item item-input item-stacked-label" for="userEmail">
+          <span class="input-label">Email Address</span>
+          <input type="text" placeholder="onyen@live.unc.edu" name="userEmail" ng-model="userEmail" class="form-control" required />
         </label>
-        <label class="item item-input" for="userPass">
+        <label class="item item-input item-stacked-label" for="userPass">
+          <span class="input-label">Password</span>
           <input type="text" placeholder="Password" name="userPass" ng-model="userPass" class="form-control" required />
         </label>
         <label class="item item-input item-select" for="userRole">
           <div class="input-label">
             Role
           </div>
-          <select name="userRole" ng-model="userRole" class="form-control">
-            <option select value="mentee">Mentee</option>
+          <select required name="userRole" ng-model="userRole" class="form-control" />
+            <option disabled selected value=""></option>
+            <option value="mentee">Mentee</option>
             <option value="mentor">Mentor</option>
             <option value="admin">Administrator</option>
           </select>

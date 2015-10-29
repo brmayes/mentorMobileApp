@@ -4,10 +4,15 @@ module.exports =
 
   # See styling options for tabs and other native components in app/common/native-styles/ios.css or app/common/native-styles/android.css
   tabs: [
+        # {
+        #   title: "Getting Started"
+        #   id: "getting-started"
+        #   location: "example#getting-started"
+        # }
     {
       title: "Home"
       id: "home"
-      location: "example#getting-started" # Supersonic module#view type navigation
+      location: "example#home" # Supersonic module#view type navigation
     }
     {
       title: "Profiles"
@@ -50,6 +55,10 @@ module.exports =
     {
       id: "login"
       location: "example#login"
+    }
+    {
+      id: "getting-started"
+      location: "example#getting-started"
     }
   ]
 
