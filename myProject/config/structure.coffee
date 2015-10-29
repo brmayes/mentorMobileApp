@@ -43,6 +43,14 @@ module.exports =
       id: "using-the-scanner"
       location: "example#using-the-scanner"
     }
+    {
+      id: "register"
+      location: "example#register"
+    }
+    {
+      id: "login"
+      location: "example#login"
+    }
   ]
 
   # drawers:

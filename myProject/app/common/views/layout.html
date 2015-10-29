@@ -16,6 +16,14 @@
   <script src="/components/supersonic/supersonic.js"></script>
   <script src="/components/webcomponentsjs/webcomponents.js"></script>
 
+  <!-- Bower Way -->
+  <script src="/components/jquery/dist/jquery.min.js"></script>
+  <script src="/components/parse/parse.min.js"></script>
+
+  <script>
+  Parse.initialize("NGpR2l16GaeJ0uM3AtABPUi6npZGc6XWh5LWbOz5", "bO9qCmK4ZhIKixUQrR9fiRcLXi7MbhbE1VK7penU");
+  </script>
+
   <% _.each(yield.modules, function(module) { %>
   <script src="/app/<%= module %>.js"></script>
   <% }); %>
