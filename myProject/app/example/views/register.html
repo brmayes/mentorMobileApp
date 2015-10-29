@@ -23,16 +23,19 @@
         <label class="item item-input" for="userPass">
           <input type="text" placeholder="Password" name="userPass" ng-model="userPass" class="form-control" required />
         </label>
-        <!-- <label for="role">Choose Role:
-          <select name="role" id="userRole">
-          <option value="mentee">Mentee</option>
-          <option value="mentor">Mentor</option>
-          <option value="admin">Administrator</option>
+        <label class="item item-input item-select" for="userRole">
+          <div class="input-label">
+            Role
+          </div>
+          <select name="userRole" ng-model="userRole" class="form-control">
+            <option select value="mentee">Mentee</option>
+            <option value="mentor">Mentor</option>
+            <option value="admin">Administrator</option>
           </select>
-        </label> -->
+        </label>
       </div>
 
-      <button ng-click="formParse(newUserForm)" class="button button-block button-positive">Submit</button>
+      <button ng-click="regFormParse(newUserForm)" class="button button-block button-positive">Submit</button>
     </form>
 
   </div>

@@ -1,23 +1,28 @@
 <super-navbar>
   <super-navbar-title>
-    Using the Scanner
+    Log In
   </super-navbar-title>
 </super-navbar>
 
 <div class="padding">
 
-  <p>To restart your current app or scan another app, follow the instructions below.</p>
+<h2>Log In</h2>
 
-  <div class="card padding">
-    <h3>On iOS</h3>
-    <p class="positive"><strong>Tap and hold on the screen with three fingers.</strong></p>
-    <p>This opens the Scanner context menu.</p>
-  </div>
+  <div ng-controller="FormController">
 
-  <div class="card padding">
-    <h3>On Android</h3>
-    <p class="balanced"><strong>Press the native back button in your app's root view.</strong></p>
-    <p>This will return you to the initial Scan screen.</p>
+    <form name="loginForm">
+      <div class="form-group">
+        <label class="item item-input" for="userName">
+          <input type="text" placeholder="User Name" name="userName" ng-model="userName" class="form-control" required />
+        </label>
+        <label class="item item-input" for="userPass">
+          <input type="text" placeholder="Password" name="userPass" ng-model="userPass" class="form-control" required />
+        </label>
+      </div>
+
+      <button ng-click="logFormParse(loginForm)" class="button button-block button-positive">Submit</button>
+    </form>
+
   </div>
 
 </div>

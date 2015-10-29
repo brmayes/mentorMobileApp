@@ -1,14 +1,18 @@
 angular
   .module('example')
   .controller('FormController', function($scope) {
+    var userName;
+    var userPass;
+    var userEmail;
+    var userRole;
 
-    $scope.formParse = function(form) {
+    $scope.regFormParse = function(regForm) {
 
       var user = new Parse.User();
         user.set("username", $scope.userName);
         user.set("password", $scope.userPass);
         user.set("email", $scope.userEmail);
-        //user.set("role", $scope.userRole);
+        user.set("role", $scope.userRole);
 
         user.signUp(null, {
           success: function(user) {
@@ -22,5 +26,49 @@ angular
       });
 
     }
+
+$scope.logFormParse = function(logForm) {
+
+  var currentUser = Parse.User.current();
+  var username = $scope.userName;
+  var password = $scope.userPass;
+  alert(username + password);
+
+
+      Parse.User.logIn(username, password, {
+        success: function(user) {
+          // Do stuff after successful login.
+          alert("logged in!");
+        },
+        error: function(user, error) {
+          // The login failed. Check error to see why.
+          alert("Error: " + error.code + " " + error.message);
+          //alert("login failed!");
+        }
+      });
+
+    }
+
+
+
+
+//     $scope.loginFormParse = function(logForm) {
+//       function logIn() {
+//         Parse.User.logIn("userEmail", "userPass", {
+//           success: function(user) {
+//             // Do stuff after successful login.
+//             alert("logged in!");
+//           },
+//           error: function(user, error) {
+//             // The login failed. Check error to see why.
+//             alert("Error: " + error.code + " " + error.message);
+//             //alert("login failed!");
+//
+//           }
+//         });
+//
+//     }
+//
+// }
 
   });
