@@ -2,7 +2,6 @@ angular
   .module('example')
   .controller('FormController', function($scope) {
 
-
     // FORM FOR REGISTERING USER
     $scope.regFormParse = function(regForm) {
 
@@ -69,30 +68,31 @@ angular
 
       supersonic.ui.modal.show(modalView, options);
 
-
-      // Parse.User.logOut({
-      //   alert("log out started");
-      //   success: function(user) {
-      //     // Do stuff after successful login.
-      //     alert("You have been successfully logged out!");
-      //     var currentUser = Parse.User.current();
-      //     // supersonic.ui.modal.hide();
-      //     // alert("WHY WON'T IT HIDE")
-      //   },
-      //   error: function(user, error) {
-      //     // The login failed. Check error to see why.
-      //     //alert("Error: " + error.code + " " + error.message);
-      //     alert("Error!");
-      //   }
-      // });
-
-        // alert("log out stared")
-        // Parse.User.logOut();
-        // alert("You have successfully been logged out.")
-        // var currentUser = Parse.User.current();  // this will now be null
-        // var afterLogOut = new supersonic.ui.View("example#getting-started")
-        // supersonic.ui.layers.push(gettingStarted);
     };
+
+    //TAB FUNCTIONS IN PROFILE
+    $scope.profilePersonal = function(profilePersonalButton){
+
+      alert("clicked personal tab");
+
+
+    };
+    $scope.profileAcademics = function(profileAcademicsButton){
+
+      alert("clicked academics tab");
+
+    };
+    $scope.profileContact = function(profileContactButton){
+
+      alert("clicked contact tab");
+
+    };
+    $scope.profileConnect = function(profileConnectButton){
+
+      alert("clicked connect tab");
+
+    };
+
 
 
 

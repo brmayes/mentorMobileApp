@@ -22,13 +22,52 @@
       class
     </h4>
 
-    <div class="row profileTabsRow">
-      <div class="col profileTabs profileTabsLeft ">.col</div>
-      <div class="col profileTabs">.col</div>
-      <div class="col profileTabs">.col</div>
-      <div class="col profileTabs">.col</div>
-    </div>
+<!-- START TABS -->
 
+
+
+    <div ng-controller="FormController" ng-app="ngAnimate">
+      <!-- TABS  -->
+      <div class="row profileTabsRow">
+        <div class="col profileTabs"></div>
+        <div class="col profileTabs">
+          <button ng-click="profilePersonal()" class="button button-icon icon super-ios-person">
+            <!-- Personal -->
+          </button>
+        </div>
+        <div class="col profileTabs">
+          <button ng-click="profileAcademics()" class="button button-icon icon super-university">
+            <!-- Academics -->
+          </button>
+        </div>
+        <div class="col profileTabs">
+          <button ng-click="profileContact()" class="button button-icon icon super-email">
+            <!-- Contact -->
+          </button>
+        </div>
+        <div class="col profileTabs">
+          <button ng-click="profileConnect()" class="button button-icon icon super-ios-color-filter">
+            <!-- Connect -->
+          </button>
+        </div>
+        <div class="col profileTabs"></div>
+      </div>
+
+      <!-- TABS CONTENT -->
+        Click me: <input type="checkbox" ng-model="checked" aria-label="Toggle ngHide"><br/>
+      <div>
+        Show:
+        <div class="check-element animate-show" ng-show="checked">
+          I show up when your checkbox is checked.
+        </div>
+      </div>
+      <div>
+        Hide:
+        <div class="check-element animate-show" ng-hide="checked">
+          I hide when your checkbox is checked.
+        </div>
+      </div>
+    </div>
 
 
 </div>
