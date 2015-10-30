@@ -70,30 +70,5 @@ angular
 
     };
 
-    //TAB FUNCTIONS IN PROFILE
-    $scope.profilePersonal = function(profilePersonalButton){
-
-      alert("clicked personal tab");
-
-
-    };
-    $scope.profileAcademics = function(profileAcademicsButton){
-
-      alert("clicked academics tab");
-
-    };
-    $scope.profileContact = function(profileContactButton){
-
-      alert("clicked contact tab");
-
-    };
-    $scope.profileConnect = function(profileConnectButton){
-
-      alert("clicked connect tab");
-
-    };
-
-
-
 
   });

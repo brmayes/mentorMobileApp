@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Highcharts-ng - jsFiddle demo by brmayes</title>
+  <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.js'></script>
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <script type='text/javascript' src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <style type='text/css'>
+    .form {
+      padding: 20px
+    }
+    .cancel {
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div ng-app="sampleapp">
+    <div ng-controller="samplecontoller">
+      <div class="form">
+        <p>Click to see the different states</p>
+        <button class="btn btn-primary" ng-click="showloader()">Show loader</button>
+        <button class="btn btn-primary" ng-click="noresult()">No Result</button>
+        <button class="btn btn-primary" ng-click="result()">Result</button>
+      </div>
+      <div class="cancel">
+        <button ng-show="state == 'LOADING'" class="btn btn-success">Loading...
+          <i class="fa fa-spinner fa-spin"></i>
+        </button>
+        <p ng-show="state == 'NORESULT'">No results found .Please try after some time</p>
+        <p ng-show="state == 'SUCCESS'">
+          <strong>Your result</strong>
+          <br/> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae
+          est. Mauris placerat eleifend leo.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script type='text/javascript'>
+    var myapp = angular.module('sampleapp', []);
+
+    myapp.controller('samplecontoller', function($scope) {
+
+      $scope.showloader = function() {
+        $scope.state = "LOADING";
+      }
+      $scope.noresult = function() {
+        $scope.state = "NORESULT";
+      }
+      $scope.result = function() {
+        $scope.state = "SUCCESS";
+      }
+
+    });
+  </script>
+
+</body>
+</html>

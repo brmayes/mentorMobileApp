@@ -1,73 +1,65 @@
-<div ng-controller="FormController">
+<div ng-controller="Profile">
   <!-- took out class="padding" -->
 
   <super-navbar>
     <super-navbar-title>
-      Settings
+      <!-- Settings -->
     </super-navbar-title>
   </super-navbar>
 
   <img class="userProfilePicture" src="http://dummyimage.com/200x200/000/dceb36&text=Profile+Image">
+  <h3 class="userProfileName">
+    your name
+  </h3>
 
+  <h4 class="userProfileMajor">
+    major
+  </h4>
 
-    <h3 class="userProfileName">
-      your name
-    </h3>
+  <h4 class="userProfileClass">
+    class
+  </h4>
 
-    <h4 class="userProfileMajor">
-      major
-    </h4>
-
-    <h4 class="userProfileClass">
-      class
-    </h4>
-
-<!-- START TABS -->
-
-
-
-    <div ng-controller="FormController" ng-app="ngAnimate">
-      <!-- TABS  -->
-      <div class="row profileTabsRow">
-        <div class="col profileTabs"></div>
-        <div class="col profileTabs">
-          <button ng-click="profilePersonal()" class="button button-icon icon super-ios-person">
-            <!-- Personal -->
-          </button>
-        </div>
-        <div class="col profileTabs">
-          <button ng-click="profileAcademics()" class="button button-icon icon super-university">
-            <!-- Academics -->
-          </button>
-        </div>
-        <div class="col profileTabs">
-          <button ng-click="profileContact()" class="button button-icon icon super-email">
-            <!-- Contact -->
-          </button>
-        </div>
-        <div class="col profileTabs">
-          <button ng-click="profileConnect()" class="button button-icon icon super-ios-color-filter">
-            <!-- Connect -->
-          </button>
-        </div>
-        <div class="col profileTabs"></div>
+  <!-- START TABS -->
+  <div ng-controller="Profile" ng-app="ngAnimate">
+    <!-- TABS  -->
+    <div class="row profileTabsRow">
+      <div class="col profileTabs"></div>
+      <div class="col profileTabs">
+        <button ng-click="profilePersonal()" class="button button-icon icon super-ios-person"></button>
       </div>
-
-      <!-- TABS CONTENT -->
-        Click me: <input type="checkbox" ng-model="checked" aria-label="Toggle ngHide"><br/>
-      <div>
-        Show:
-        <div class="check-element animate-show" ng-show="checked">
-          I show up when your checkbox is checked.
-        </div>
+      <div class="col profileTabs">
+        <button ng-click="profileAcademics()" class="button button-icon icon super-university"></button>
       </div>
-      <div>
-        Hide:
-        <div class="check-element animate-show" ng-hide="checked">
-          I hide when your checkbox is checked.
-        </div>
+      <div class="col profileTabs">
+        <button ng-click="profileContact()" class="button button-icon icon super-email"></button>
+      </div>
+      <div class="col profileTabs">
+        <button ng-click="profileConnect()" class="button button-icon icon super-ios-color-filter"></button>
+      </div>
+      <div class="col profileTabs"></div>
+    </div>
+    <div class="profileTabsDivs padding">
+      <div ng-show="state == 'PERSONAL'">
+        <p>
+          PERSONAL INFORMATION
+        </p>
+      </div>
+      <div ng-show="state == 'ACADEMICS'">
+        <p>
+          ACADEMIC INFORMATION
+        </p>
+      </div>
+      <div ng-show="state == 'CONTACT'">
+        <p>
+          CONTACT INFORMATION
+        </p>
+      </div>
+      <div ng-show="state == 'CONNECT'">
+        <p>
+          CONNECT INFORMATION
+        </p>
       </div>
     </div>
-
-
+  </div>
 </div>
