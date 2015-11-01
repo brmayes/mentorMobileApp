@@ -3,63 +3,21 @@
 
   <super-navbar>
     <super-navbar-title>
-      <!-- Settings -->
+      Settings
     </super-navbar-title>
   </super-navbar>
 
-  <img class="userProfilePicture" src="http://dummyimage.com/200x200/000/dceb36&text=Profile+Image">
-  <h3 class="userProfileName">
-    your name
-  </h3>
-
-  <h4 class="userProfileMajor">
-    major
-  </h4>
-
-  <h4 class="userProfileClass">
-    class
-  </h4>
-
-  <!-- START TABS -->
-  <div ng-controller="Profile" ng-app="ngAnimate">
-    <!-- TABS  -->
-    <div class="row profileTabsRow">
-      <div class="col profileTabs"></div>
-      <div class="col profileTabs">
-        <button ng-click="profilePersonal()" class="button button-icon icon super-ios-person"></button>
-      </div>
-      <div class="col profileTabs">
-        <button ng-click="profileAcademics()" class="button button-icon icon super-university"></button>
-      </div>
-      <div class="col profileTabs">
-        <button ng-click="profileContact()" class="button button-icon icon super-email"></button>
-      </div>
-      <div class="col profileTabs">
-        <button ng-click="profileConnect()" class="button button-icon icon super-ios-color-filter"></button>
-      </div>
-      <div class="col profileTabs"></div>
+  <div ng-app="scopeExample">
+    <div class="show-scope-demo">
+    <div ng-controller="GreetController">
+      Hello {{name}}!
     </div>
-    <div class="profileTabsDivs padding">
-      <div ng-show="state == 'PERSONAL'">
-        <p>
-          PERSONAL INFORMATION
-        </p>
-      </div>
-      <div ng-show="state == 'ACADEMICS'">
-        <p>
-          ACADEMIC INFORMATION
-        </p>
-      </div>
-      <div ng-show="state == 'CONTACT'">
-        <p>
-          CONTACT INFORMATION
-        </p>
-      </div>
-      <div ng-show="state == 'CONNECT'">
-        <p>
-          CONNECT INFORMATION
-        </p>
-      </div>
+    <div ng-controller="ListController">
+      <ol>
+        <li ng-repeat="name in names">{{name}} from {{department}}</li>
+      </ol>
     </div>
   </div>
+</div>
+
 </div>
