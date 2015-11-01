@@ -70,5 +70,17 @@ angular
 
     };
 
+    //SHOWS INFORMATION ON PROFILE PAGE
+    // $scope.profileInformation = function(profileInformation) {
+    //
+    //   var currentUser = Parse.User.current();
+    //   var username = $scope.userName;
+    //   var password = $scope.userPass;
+    //   var email = $scope.userEmail;
+    //
+    //   alert(username);
+    //
+    //   }
+
 
   });

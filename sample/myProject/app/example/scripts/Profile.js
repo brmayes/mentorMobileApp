@@ -1,7 +1,6 @@
-angular
-  .module('example')
+angular.module('example')
   .controller('Profile', function($scope, supersonic) {
-
+    alert("hello");
     $scope.state = "PERSONAL";
 
       $scope.profilePersonal = function() {
@@ -9,6 +8,7 @@ angular
       }
       $scope.profileAcademics = function() {
         $scope.state = "ACADEMICS";
+
       }
       $scope.profileContact = function() {
         $scope.state = "CONTACT";

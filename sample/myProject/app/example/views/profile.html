@@ -1,15 +1,15 @@
-<div ng-controller="Profile">
+<!-- <div ng-controller="Profile"> -->
   <!-- took out class="padding" -->
 
   <super-navbar>
     <super-navbar-title>
-      <!-- Settings -->
+      WORKING
     </super-navbar-title>
   </super-navbar>
 
   <img class="userProfilePicture" src="http://dummyimage.com/200x200/000/dceb36&text=Profile+Image">
-  <h3>
-    {{greeting}}
+  <h3 class="userProfileName">
+    your name
   </h3>
 
   <h4 class="userProfileMajor">
@@ -21,7 +21,7 @@
   </h4>
 
   <!-- START TABS -->
-  <div ng-controller="Profile" ng-app="ngAnimate">
+  <div ng-controller="Profile">
     <!-- TABS  -->
     <div class="row profileTabsRow">
       <div class="col profileTabs"></div>
@@ -39,6 +39,7 @@
       </div>
       <div class="col profileTabs"></div>
     </div>
+
     <div class="profileTabsDivs padding">
       <div ng-show="state == 'PERSONAL'">
         <p>
@@ -62,4 +63,4 @@
       </div>
     </div>
   </div>
-</div>
+<!-- </div> -->
