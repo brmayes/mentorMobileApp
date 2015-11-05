@@ -1,20 +1,24 @@
 <div ng-controller="Profile">
+  <!-- took out class="padding" -->
 
   <super-navbar>
     <super-navbar-title>
-      Profile
+      PROFILE
     </super-navbar-title>
-    <super-navbar-button side="right" ng-click="editProfile()">
-      Edit
-    </super-navbar-button>
   </super-navbar>
 
-
   <img class="userProfilePicture" src="http://dummyimage.com/200x200/000/dceb36&text=Profile+Image">
-  <h3 id="userProfileName" class="userProfileName"></h3>
-  <h4 id="userProfileMajor" class="userProfileMajor"></h4>
-  <h4 id="userProfileClass" class="userProfileClass"></h4>
-  
+  <h3 class="userProfileName">
+    your name
+  </h3>
+
+  <h4 class="userProfileMajor">
+    major
+  </h4>
+
+  <h4 class="userProfileClass">
+    class
+  </h4>
 
   <!-- START TABS -->
   <div ng-controller="Profile">
@@ -31,7 +35,7 @@
         <button ng-click="profileContact()" class="button button-icon icon super-email"></button>
       </div>
       <div class="col profileTabs">
-        <button ng-click="profileConnect()" class="button button-icon icon super-android-share-alt"></button>
+        <button ng-click="profileConnect()" class="button button-icon icon super-ios-color-filter"></button>
       </div>
       <div class="col profileTabs"></div>
     </div>

@@ -61,6 +61,10 @@ module.exports =
       id: "getting-started"
       location: "example#getting-started"
     }
+    {
+      id: "edit-profile"
+      location: "example#edit-profile"
+    }
   ]
 
   # drawers:

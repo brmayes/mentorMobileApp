@@ -1,0 +1,206 @@
+<super-navbar>
+  <super-navbar-title>
+    Edit Profile
+  </super-navbar-title>
+</super-navbar>
+
+<!-- <div class="padding"> -->
+
+
+
+<div ng-controller="Profile">
+
+  <div class="editProfileMargin">
+  <h4 style="text-align:center; margin-top:15px; margin-bottom:15px;">Basic Information</h4>
+  <form name="editUserProfile">
+    <div class="form-group list">
+      <label class="item item-input item-stacked-label" for="userName">
+        <span class="input-label">Full Name</span>
+        <input type="text" placeholder="First and Last Name" name="userName" ng-model="userName" class="form-control" required />
+      </label>
+      <label class="item item-input item-stacked-label" for="userEmail">
+        <span class="input-label">Email Address</span>
+        <input type="text" placeholder="onyen@live.unc.edu" name="userEmail" ng-model="userEmail" class="form-control" required />
+      </label>
+      <label class="item item-input item-stacked-label" for="userPass">
+        <span class="input-label">Password</span>
+        <input type="text" placeholder="Password" name="userPass" ng-model="userPass" class="form-control" required />
+      </label>
+      <label class="item item-input item-stacked-label" for="userRole">
+        <span class="input-label">Role</span>
+        <input type="text" placeholder="Role" name="userPass" ng-model="userPass" class="form-control" required />
+      </label>
+    </div>
+    </div>
+
+      <!-- PERSONAL -->
+      <div class="editProfileMargin">
+      <h4 style="text-align:center; margin-top:15px; margin-bottom:15px;">Personal</h4>
+      <label class="item item-input" for="bio">
+        <textarea placeholder="Write a little about yourself..."></textarea>
+      </label>
+    </div>
+
+      <!-- ACADEMICS INFORMATION -->
+      <div class="editProfileMargin">
+      <h4 style="text-align:center; margin-top:15px; margin-bottom:15px;">Academics</h4>
+      <label class="item item-input item-select" for="userMajor">
+        <div class="input-label">
+          Major
+        </div>
+        <select required name="userMajor" ng-model="userMajor" class="form-control" />
+        <option selected value="undecided">Undecided</option>
+        <option disabled value="arts">Arts</option>
+        <option value="art history">Art History</option>
+        <option value="dramatic art">Dramatic Art</option>
+        <option value="music">Music</option>
+        <option value="studio art">Studio Art</option>
+        <option disabled value="biological and health sciences">Biological and Health Sciences</option>
+        <option value="biology">Biology</option>
+        <option value="clinical laboratory science">Clinical Laboratory Science</option>
+        <option value="dental hygiene">Dental Hygiene</option>
+        <option value="environmental sciences">Environmental Sciences</option>
+        <option value="exercise and sport science">Exercise and Sport Science</option>
+        <option value="nursing">Nursing</option>
+        <option value="pharmacy">Pharmacy</option>
+        <option value="pre-health (pre-dental, pre-med, pre-optometry, pre-veterinary)">Pre-Health (Pre-Dental, Pre-Med, Pre-Optometry, Pre-Veterinary)</option>
+        <option value="psychology (behavioral, clinical, or cognitive)">Psychology (Behavioral, Clinical, or Cognitive)</option>
+        <option value="public health (biostatistics, environmental health sciences, health policy and management, and nutrition)">Public Health (Biostatistics, Environmental Health Sciences, Health Policy and Management, and Nutrition)</option>
+        <option value="radiologic science">Radiologic Science</option>
+        <option value="speech and hearing sciences">Speech and Hearing Sciences</option>
+        <option disabled value="business">Business</option>
+        <option value="consulting">Consulting</option>
+        <option value="entrepreneurship">Entrepreneurship</option>
+        <option value="finance/investments">Finance/Investments</option>
+        <option value="general management">General Management</option>
+        <option value="international business">International Business</option>
+        <option value="marketing management">Marketing Management</option>
+        <option value="operations">Operations</option>
+        <option value="real estate">Real Estate</option>
+        <option value="sales">Sales</option>
+        <option disabled value="education">Education</option>
+        <option value="music education and unc best">Music Education or UNC Best (Science, Math and Education)</option>
+        <option value="elementary education, middle grades education, and secondary education">Elementary Education, Middle Grades Education, and Secondary Education Five-Year Bachelor-Master’s Program</option>
+        <option disabled value="humanities">Humanities</option>
+        <option value="african, african american, and diaspora studies (including arabic, lingala, swahili, and wolof)">African, African American, and Diaspora Studies (including Arabic, Lingala, Swahili, and Wolof)</option>
+        <option value="american studies (including american indian studies, folklore, international american studies, and southern studies)">American Studies (including American Indian Studies, Folklore, International American Studies, and Southern Studies)</option>
+        <option value="asian studies (including arabic, chinese, modern hebrew, hindi-urdu, japanese, korean, persian, and turkish)">Asian Studies (including Arabic, Chinese, Modern Hebrew, Hindi-Urdu, Japanese, Korean, Persian, and Turkish)</option>
+        <option value="classics (including classical archaeology, classical humanities, greek, and latin)">Classics (including Classical Archaeology, Classical Humanities, Greek, and Latin)</option>
+        <option value="communication studies">Communication Studies</option>
+        <option value="comparative literature (including international literature and global cinema)">Comparative Literature (including International Literature and Global Cinema)</option>
+        <option value="creative writing">Creative Writing</option>
+        <option value="english">English</option>
+        <option value="germanic and slavic languages and literatures (including bosnian-croatian-serbian, czech, dutch, german, hungarian, polish, and russian)">Germanic and Slavic Languages and Literatures (including Bosnian-Croatian-Serbian, Czech, Dutch, German, Hungarian, Polish, and Russian)</option>
+        <option value="interdisciplinary studies">Interdisciplinary Studies</option>
+        <option value="latin american studies">Latin American Studies</option>
+        <option value="latina/o studies">Latina/o Studies</option>
+        <option value="linguistics">Linguistics</option>
+        <option value="medieval and early modern studies">Medieval and Early Modern Studies</option>
+        <option value="philosophy">Philosophy</option>
+        <option value="philosophy, politics, and economics">Philosophy, Politics, and Economics</option>
+        <option value="pre-law">Pre-Law</option>
+        <option value="religious studies (including jewish studies)">Religious Studies (including Jewish Studies)</option>
+        <option value="romance languages and literatures (including french, italian, hispanic linguistics, hispanic literature and cultures, and portuguese)">Romance Languages and Literatures (including French, Italian, Hispanic Linguistics, Hispanic Literature and Cultures, and Portuguese)</option>
+        <option value="sexuality studies">Sexuality Studies</option>
+        <option value="women’s and gender studies">Women’s and Gender Studies</option>
+        <option value="writing for the screen and stage">Writing for the Screen and Stage</option>
+        <option disabled value="media and journalism">Media and Journalism</option>
+        <option value="advertising">Advertising</option>
+        <option value="broadcast journalism and electronic communication">Broadcast Journalism & Electronic Communication</option>
+        <option value="business journalism">Business Journalism</option>
+        <option value="electronic communication">Electronic Communication</option>
+        <option value="multimedia">Multimedia</option>
+        <option value="photojournalism">Photojournalism</option>
+        <option value="public relations">Public Relations</option>
+        <option value="reporting">Reporting</option>
+        <option value="strategic communication">Strategic Communication</option>
+        <option disabled value="mathematics, computing, and engineering">Mathematics, Computing, and Engineering</option>
+        <option value="biomedical engineering">Biomedical Engineering</option>
+        <option value="computer science">Computer Science</option>
+        <option value="mathematical decision sciences">Mathematical Decision Sciences</option>
+        <option value="mathematics">Mathematics</option>
+        <option value="statistics">Statistics</option>
+        <option disabled value="physical sciences">Physical Sciences</option>
+        <option value="biochemistry">Biochemistry</option>
+        <option value="chemistry">Chemistry</option>
+        <option value="physics and astronomy">Physics and Astronomy</option>
+        <option value="marine sciences">Marine Sciences</option>
+        <option value="geology">Geology</option>
+        <option value="geography (environment and physical systems)">Geography (Environment and Physical Systems)</option>
+        <option disabled value="social sciences">Social Sciences</option>
+        <option value="aerospace studies">Aerospace Studies</option>
+        <option value="anthropology">Anthropology</option>
+        <option value="archaeology">Archaeology</option>
+        <option value="asian studies">Asian Studies</option>
+        <option value="contemporary european studies">Contemporary European Studies</option>
+        <option value="city and regional planning">City and Regional Planning</option>
+        <option value="economics">Economics</option>
+        <option value="environmental studies">Environmental Studies</option>
+        <option value="geography (social and cultural)">Geography (Social and Cultural)</option>
+        <option value="global studies">Global Studies</option>
+        <option value="history">History</option>
+        <option value="information science">Information Science</option>
+        <option value="latin american studies">Latin American Studies</option>
+        <option value="management and society">Management and Society</option>
+        <option value="military science">Military Science</option>
+        <option value="naval science">Naval Science</option>
+        <option value="peace, war, and defense">Peace, War, and Defense</option>
+        <option value="political science">Political Science</option>
+        <option value="psychology (developmental and social)">Psychology (Developmental and Social)</option>
+        <option value="public policy">Public Policy</option>
+        <option value="social and economic justice">Social and Economic Justice</option>
+        <option value="sociology">Sociology</option>
+        <option value="sustainability studies">Sustainability Studies</option>
+        </select>
+      </label>
+      <label class="item item-input" for="academicInterest">
+        <textarea placeholder="Academic Interests"></textarea>
+      </label>
+      <label class="item item-input" for="campusInvolvement">
+        <textarea placeholder="Campus Involvement"></textarea>
+      </label>
+    </div>
+
+      <!-- CONTACT -->
+      <div class="editProfileMargin">
+      <h4 style="text-align:center; margin-top:15px; margin-bottom:15px;">Contact</h4>
+      <label class="item item-input item-stacked-label" for="phoneNum">
+        <span class="input-label">Phone Number</span>
+        <input type="text" placeholder="xxx-xxx-xxxx" name="phoneNum" ng-model="phoneNum" class="form-control" />
+      </label>
+      <label class="item item-input item-stacked-label" for="personalEmail">
+        <span class="input-label">Personal Email</span>
+        <input type="text" placeholder="email@email.com" name="personalEmail" ng-model="personalEmail" class="form-control" />
+      </label>
+      <label class="item item-input item-stacked-label" for="linkedin">
+        <span class="input-label">LinkedIn</span>
+        <input type="text" placeholder="LinkedIn" name="linkedin" ng-model="linkedin" class="form-control" />
+      </label>
+    </div>
+
+      <!-- SOCIAL MEDIA INFORMATION -->
+      <div class="editProfileMargin">
+      <h4 style="text-align:center; margin-top:15px; margin-bottom:15px;">Social Media</h4>
+      <label class="item item-input item-stacked-label" for="facebook">
+        <span class="input-label">Facebook</span>
+        <input type="text" placeholder="Facebook" name="facebook" ng-model="facebook" class="form-control" />
+      </label>
+      <label class="item item-input item-stacked-label" for="twitter">
+        <span class="input-label">Twitter</span>
+        <input type="text" placeholder="@" name="twitter" ng-model="twitter" class="form-control" />
+      </label>
+      <label class="item item-input item-stacked-label" for="instagram">
+        <span class="input-label">Instagram</span>
+        <input type="text" placeholder="Instagram" name="instagram" ng-model="instagram" class="form-control" />
+      </label>
+      <label class="item item-input item-stacked-label" for="snapchat">
+        <span class="input-label">SnapChat</span>
+        <input type="text" placeholder="SnapChat" name="snapchat" ng-model="snapchat" class="form-control" />
+      </label>
+    </div>
+
+
+    <button ng-click="profileSave()" class="button button-block button-positive">Save</button>
+  </form>
+
+</div>

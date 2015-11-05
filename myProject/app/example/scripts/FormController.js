@@ -39,12 +39,12 @@ angular
       var password = $scope.userPass;
       var email = $scope.userEmail;
 
+
         Parse.User.logIn(username, password, {
           success: function(user) {
             // Do stuff after successful login.
             alert("Success!");
             supersonic.ui.modal.hide();
-            // alert("WHY WON'T IT HIDE")
           },
           error: function(user, error) {
             // The login failed. Check error to see why.
