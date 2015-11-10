@@ -65,6 +65,10 @@ module.exports =
       id: "edit-profile"
       location: "example#edit-profile"
     }
+    {
+      id: "temp-profile-display"
+      location: "example#temp-profile-display"
+    }
   ]
 
   # drawers:
