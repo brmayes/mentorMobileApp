@@ -25,6 +25,13 @@ angular
     var userData = new UserData();
 
     function userProfileUpdate(){
+
+
+    };
+
+    $scope.profileSave = function(editUserProfile) {
+      supersonic.logger.log("save");
+
       alert("the function is running");
 
       //userData.set("facebook", $scope.facebook);
@@ -42,12 +49,6 @@ angular
         }
       });
 
-    };
-
-    $scope.profileSave = function(editUserProfile) {
-      supersonic.logger.log("save");
-      //supersonic.logger.log(editUserProfile);
-      //alert("Information Saved!");
       var view = new supersonic.ui.View("example#profile");
       supersonic.ui.layers.push(view);
     }
