@@ -41,13 +41,4 @@ angular
       supersonic.ui.layers.push(view);
     }
 
-    $scope.profileSave = function(editUserProfile) {
-      supersonic.logger.log("save");
-      //supersonic.logger.log(editUserProfile);
-      //alert("Information Saved!");
-      // var view = new supersonic.ui.View("example#profile");
-      // supersonic.ui.layers.push(view);
-    }
-
-
   });

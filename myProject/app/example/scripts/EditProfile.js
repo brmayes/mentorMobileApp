@@ -4,7 +4,8 @@ angular
 
     var currentUserName = Parse.User.current();
     var currentUserId = Parse.User.current().id;
-
+    var currentUserEmail = Parse.User.current().getEmail();
+    var currentUserRole = Parse.User.current().get("role");
 
     //creating user information for the first time
     var UserInformation = Parse.Object.extend("UserInformation");
@@ -12,46 +13,106 @@ angular
     //creating a new instance
     var userInformation = new UserInformation();
 
-    $scope.profileSave = function(editUserProfile) {
-
-      supersonic.logger.log("save");
-      alert("the function is running");
-
-      userInformation.set("personal", "This is a little about me...");
-      userInformation.set("facebook", $scope.facebook);
-      userInformation.set("userName", currentUserName);
-      userInformation.save(null, {
-        success: function(userInformation) {
-          // Find all data by the current user
-          var query = new Parse.Query(UserInformation);
-          query.equalTo("userName", currentUserName);
-          query.find({
-            success: function(usersData) {
-              // userPosts contains all of the posts by the current user.
-
-            }
-          });
-        }
-      });
-
-      var view = new supersonic.ui.View("example#temp-profile-display");
-      supersonic.ui.layers.push(view);
-
-    }
-
     $scope.profileUpdate = function(updateUserProfile) {
       var queryObject = new Parse.Query(UserInformation);
 
-      queryObject.equalTo("userName", currentUserName);
+      //why can i access the user id and not use it for the query?
 
+      queryObject.equalTo("userName", currentUserName);
       queryObject.find({
         success: function(usersData) {
           // userPosts contains all of the posts by the current user.
           if (usersData.length != 0) {
             supersonic.logger.log("user is in system");
+
+            //UPDATE THE INFORMATION
+            supersonic.logger.log("updating old information");
+
+            //autofill basic information
+            userInformation.set("userName", currentUserName);
+            userInformation.set("userEmail", currentUserEmail);
+            userInformation.set("userRole", currentUserRole);
+
+            //bio
+            userInformation.set("userBio", $scope.bio);
+
+            //academics
+            userInformation.set("userClassStatus", $scope.classStatus);
+            userInformation.set("userMajor", $scope.userMajor);
+            userInformation.set("userDoubleMajor", $scope.userDoubleMajor);
+            userInformation.set("userMinor", $scope.userMinor);
+            userInformation.set("userDoubleMinor", $scope.userDoubleMinor);
+            userInformation.set("userAcademicInterests", $scope.academicInterests);
+            userInformation.set("userCampusInvolvement", $scope.campusInvolvement);
+
+            //contact
+            userInformation.set("userPhoneNum", $scope.phoneNum);
+            userInformation.set("userPersonalEmail", $scope.personalEmail);
+            userInformation.set("userLinkedIn", $scope.linkedIn);
+
+            //social
+            userInformation.set("userFacebook", $scope.facebook);
+            userInformation.set("userTwitter", $scope.twitter);
+            userInformation.set("userInstagram", $scope.instagram);
+            userInformation.set("userSnapChat", $scope.snapchat);
+
+            userInformation.save(null, {
+              success: function(userInformation) {
+                userInformation.save();
+                alert("User information updated!");
+              }
+            });
+
           }
           else {
+
             supersonic.logger.log("user is not in system");
+
+            //STORE NEW INFORMATION
+            supersonic.logger.log("storing new information");
+
+              //autofill basic information
+              userInformation.set("userName", currentUserName);
+              userInformation.set("userEmail", currentUserEmail);
+              userInformation.set("userRole", currentUserRole);
+
+              //bio
+              userInformation.set("userBio", $scope.bio);
+
+              //academics
+              userInformation.set("userClassStatus", $scope.classStatus);
+              userInformation.set("userMajor", $scope.userMajor);
+              userInformation.set("userAcademicInterests", $scope.academicInterests);
+              userInformation.set("userCampusInvolvement", $scope.campusInvolvement);
+
+              //contact
+              userInformation.set("userPhoneNum", $scope.phoneNum);
+              userInformation.set("userPersonalEmail", $scope.personalEmail);
+              userInformation.set("userLinkedIn", $scope.linkedIn);
+
+              //social
+              userInformation.set("userFacebook", $scope.facebook);
+              userInformation.set("userTwitter", $scope.twitter);
+              userInformation.set("userInstagram", $scope.instagram);
+              userInformation.set("userSnapChat", $scope.snapchat);
+
+            userInformation.save(null, {
+              success: function(userInformation) {
+                // Find all data by the current user
+                var query = new Parse.Query(UserInformation);
+                query.equalTo("userName", currentUserName);
+                query.find({
+                  success: function(usersData) {
+                    // userPosts contains all of the posts by the current user.
+                    alert("User data has been saved!");
+                  },
+                  error: function(usersData) {
+                    alert("Error! User data was not saved. " + error.message);
+                  }
+                });
+              }
+            });
+
           }
         }
       });
