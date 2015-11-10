@@ -1,0 +1,43 @@
+.supersonic-navbar-mock {
+  background-color: #00B5FF !important;
+  text-align: center;
+  font-weight: 600;
+}
+
+/*PROFILE PAGE SETTING*/
+.userProfilePicture {
+  margin: 0 auto;
+  display: block;
+  width: 170px;
+  heigh: 170px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.userProfileName, .userProfileMajor, .userProfileClass {
+  text-align: center;
+}
+
+.profileTabsRow {
+  margin: auto 0;
+  text-align: center;
+}
+
+.profileTabs {
+  /*border: 1px solid black;*/
+  height: 50px;
+}
+
+.profileTabsLeft {
+  /*border-top: 3px solid black;*/
+  border-botom: 3px solid black;
+  height: 50px;
+}
+
+.profileTabsDivs {
+
+}
+
+.editProfileMargin {
+  margin-bottom: 45px;
+}

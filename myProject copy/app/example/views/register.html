@@ -1,0 +1,47 @@
+<super-navbar>
+  <super-navbar-title>
+    Register
+  </super-navbar-title>
+</super-navbar>
+
+<div class="padding">
+
+<h2>Register</h2>
+
+  <div ng-controller="FormController">
+
+
+
+    <form name="newUserForm">
+      <div class="form-group list">
+        <label class="item item-input item-stacked-label" for="userName">
+          <span class="input-label">Full Name</span>
+          <input type="text" placeholder="First and Last Name" name="userName" ng-model="userName" class="form-control" required />
+        </label>
+        <label class="item item-input item-stacked-label" for="userEmail">
+          <span class="input-label">Email Address</span>
+          <input type="text" placeholder="onyen@live.unc.edu" name="userEmail" ng-model="userEmail" class="form-control" required />
+        </label>
+        <label class="item item-input item-stacked-label" for="userPass">
+          <span class="input-label">Password</span>
+          <input type="text" placeholder="Password" name="userPass" ng-model="userPass" class="form-control" required />
+        </label>
+        <label class="item item-input item-select" for="userRole">
+          <div class="input-label">
+            Role
+          </div>
+          <select required name="userRole" ng-model="userRole" class="form-control" />
+            <option disabled selected value=""></option>
+            <option value="mentee">Mentee</option>
+            <option value="mentor">Mentor</option>
+            <option value="admin">Administrator</option>
+          </select>
+        </label>
+      </div>
+
+      <button ng-click="regFormParse(newUserForm)" class="button button-block button-positive">Submit</button>
+    </form>
+
+  </div>
+
+</div>

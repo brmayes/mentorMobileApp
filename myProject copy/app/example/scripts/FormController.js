@@ -21,7 +21,6 @@ angular
               // Hooray! Let them use the app now.
               alert("Please check your inbox for a verification email.");
               supersonic.ui.View("example#getting-started");
-              // WHY THE F DIDN'T THIS WORK
             },
             error: function(user, error) {
               // Show the error message somewhere and let the user try again.

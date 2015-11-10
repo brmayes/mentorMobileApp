@@ -1,6 +1,7 @@
 angular
   .module('example')
-  .controller('Profile', function($scope, supersonic) {
+  .controller('Profile', function($scope) {
+    supersonic.logger.log("Profile.js loaded");
 
     //bringing user's name, major and class in
 
@@ -34,18 +35,19 @@ angular
 
     //showing edit profile view and saving information
     $scope.editProfile = function(editProfile) {
+      supersonic.logger.log("edit profile");
+      //alert("edit pushed")
       var view = new supersonic.ui.View("example#edit-profile");
       supersonic.ui.layers.push(view);
     }
 
-    $scope.profileSave = function(profileSave) {
-      alert("Information Saved!");
-      var view = new supersonic.ui.View("example#profile");
-      supersonic.ui.layers.push(view);
+    $scope.profileSave = function(editUserProfile) {
+      supersonic.logger.log("save");
+      //supersonic.logger.log(editUserProfile);
+      //alert("Information Saved!");
+      // var view = new supersonic.ui.View("example#profile");
+      // supersonic.ui.layers.push(view);
     }
-
-
-
 
 
   });
