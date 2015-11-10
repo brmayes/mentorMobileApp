@@ -24,18 +24,13 @@ angular
     //creating a new instance
     var userData = new UserData();
 
-    function userProfileUpdate(){
-
-
-    };
-
     $scope.profileSave = function(editUserProfile) {
       supersonic.logger.log("save");
 
       alert("the function is running");
 
-      //userData.set("facebook", $scope.facebook);
-      userData.set("facebook", "user facbook");
+      userData.set("facebook", $scope.facebook);
+      //userData.set("facebook", "user facbook");
 
       userData.save(null, {
         success: function(userData) {
