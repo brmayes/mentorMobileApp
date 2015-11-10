@@ -118,6 +118,8 @@ angular
       });
 
 
+      
+
 
 
       // var userObjectId = Parse.User.current().escape("objectId");
@@ -150,11 +152,18 @@ angular
 
     }
 
+    $scope.displayUserData = function(displayUserInformation) {
+      var userBio = Parse.User.current().get("userBio");
+      alert(userBio);
+    }
+
     //
     // var currentUserName = Parse.User.current().escape("username");
     // document.getElementById("userProfileName").innerHTML = currentUserName;
     //
     // var currentUserFacebook = Parse.User.current().escape("facebook");
     // document.getElementById("userFacebook").innerHTML = currentUserFacebook;
+
+    // We’re going in circles so maybe we should just stop. You’re going to keep saying I don’t do this and that, and I’m going to keep saying that you did this or that.
 
   });
