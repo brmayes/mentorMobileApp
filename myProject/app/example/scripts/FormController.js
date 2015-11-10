@@ -10,6 +10,29 @@ angular
         user.set("password", $scope.userPass);
         user.set("email", $scope.userEmail);
         user.set("role", $scope.userRole);
+        //
+        // //bio
+        // user.set("userBio", $scope.bio);
+        //
+        // //academics
+        // user.set("userClassStatus", $scope.classStatus);
+        // user.set("userMajor", $scope.userMajor);
+        // user.set("userDoubleMajor", $scope.userDoubleMajor);
+        // user.set("userMinor", $scope.userMinor);
+        // user.set("userDoubleMinor", $scope.userDoubleMinor);
+        // user.set("userAcademicInterests", $scope.academicInterests);
+        // user.set("userCampusInvolvement", $scope.campusInvolvement);
+        //
+        // //contact
+        // user.set("userPhoneNum", $scope.phoneNum);
+        // user.set("userPersonalEmail", $scope.personalEmail);
+        // user.set("userLinkedIn", $scope.linkedIn);
+        //
+        // //social
+        // user.set("userFacebook", $scope.facebook);
+        // user.set("userTwitter", $scope.twitter);
+        // user.set("userInstagram", $scope.instagram);
+        // user.set("userSnapChat", $scope.snapchat);
 
         if ($scope.userRole == null ) {
           alert("Please select a role.")

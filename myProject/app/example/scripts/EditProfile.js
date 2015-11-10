@@ -18,12 +18,14 @@ angular
 
       //why can i access the user id and not use it for the query?
 
-      queryObject.equalTo("userName", currentUserName);
+      queryObject.equalTo("objectId", currentUserId);
       queryObject.find({
         success: function(usersData) {
           // userPosts contains all of the posts by the current user.
           if (usersData.length != 0) {
             supersonic.logger.log("user is in system");
+            supersonic.logger.log(usersData);
+
 
             //UPDATE THE INFORMATION
             supersonic.logger.log("updating old information");
@@ -60,6 +62,7 @@ angular
               success: function(userInformation) {
                 userInformation.save();
                 alert("User information updated!");
+
               }
             });
 
@@ -118,7 +121,7 @@ angular
       });
 
 
-      
+
 
 
 
