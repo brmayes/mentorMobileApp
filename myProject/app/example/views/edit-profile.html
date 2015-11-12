@@ -499,6 +499,17 @@
 
   </form>
 
+</div>
 
-
+<div ng-controller="CameraController">
+  <form name="uploadUserImg">
+    <div class="row no-padding">
+      <div class="col no-padding">
+        <button ng-click="takePicture(userTakenPicture)" class="button button-block button-positive">Take New Photo</button>
+      </div>
+      <div class="col no-padding">
+        <button ng-click="getFromPhotoLibrary(userUploadPicture)" class="button button-block button-positive">Upload Photo</button>
+      </div>
+    </div>
+  </form>
 </div>
