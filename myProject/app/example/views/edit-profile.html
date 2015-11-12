@@ -30,6 +30,25 @@
         <span class="input-label">Role</span>
         <input type="text" placeholder="Role" name="userPass" ng-model="userPass" class="form-control" required />
       </label>
+      <label class="item item-input item-select" for="teamNum">
+        <div class="input-label">
+          Team Number
+        </div>
+        <select required name="teamNum" ng-model="teamNum" class="form-control" />
+          <option value="one">1</option>
+          <option value="two">2</option>
+          <option value="three">3</option>
+          <option value="four">4</option>
+          <option value="five">5</option>
+          <option value="six">6</option>
+          <option value="seven">7</option>
+          <option value="eight">8</option>
+          <option value="nine">9</option>
+          <option value="ten">10</option>
+          <option value="eleven">11</option>
+          <option value="twelve">12</option>
+        </select>
+      </label>
     </div>
     </div>
 
@@ -37,7 +56,7 @@
       <div class="editProfileMargin">
       <h4 style="text-align:center; margin-top:15px; margin-bottom:15px;">Personal</h4>
       <label class="item item-input" for="bio">
-        <textarea placeholder="Write a little about yourself..."></textarea>
+        <textarea name="bio" ng-model="bio" placeholder="Write a little about yourself..."></textarea>
       </label>
     </div>
 
@@ -450,10 +469,10 @@
         </select>
       </label>
       <label class="item item-input" for="academicInterests">
-        <textarea placeholder="Academic Interests"></textarea>
+        <textarea name="academicInterests" ng-model="academicInterests" placeholder="Academic Interests"></textarea>
       </label>
       <label class="item item-input" for="campusInvolvement">
-        <textarea placeholder="Campus Involvement"></textarea>
+        <textarea name="campusInvolvement" ng-model="campusInvolvement" placeholder="Campus Involvement"></textarea>
       </label>
     </div>
 

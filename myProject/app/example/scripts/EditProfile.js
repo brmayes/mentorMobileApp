@@ -13,6 +13,7 @@ angular
       user.set("userBio", $scope.bio);
 
       //academics
+      user.set("userTeamNum", $scope.teamNum);
       user.set("userClassStatus", $scope.classStatus);
       user.set("userMajor", $scope.userMajor);
       user.set("userDoubleMajor", $scope.userDoubleMajor);
@@ -36,13 +37,31 @@ angular
         success: function(user) {
           user.save();
           alert("User information updated!");
+            // var userBio = Parse.User.current().escape("userBio");
+            // document.getElementById("userBio").innerHTML = userBio;
+            // var currentUserName = Parse.User.current().escape("username");
+            // document.getElementById("userProfileName").innerHTML = currentUserName;
+            // var currentUserName = Parse.User.current().escape("username");
+            // document.getElementById("userProfileName").innerHTML = currentUserName;
+            // var currentUserName = Parse.User.current().escape("username");
+            // document.getElementById("userProfileName").innerHTML = currentUserName;
+            // var currentUserName = Parse.User.current().escape("username");
+            // document.getElementById("userProfileName").innerHTML = currentUserName;
+            // var currentUserName = Parse.User.current().escape("username");
+            // document.getElementById("userProfileName").innerHTML = currentUserName;
+            // var currentUserName = Parse.User.current().escape("username");
+            // document.getElementById("userProfileName").innerHTML = currentUserName;
+            // var currentUserName = Parse.User.current().escape("username");
+            // document.getElementById("userProfileName").innerHTML = currentUserName;
+            // var currentUserName = Parse.User.current().escape("username");
+            // document.getElementById("userProfileName").innerHTML = currentUserName;
+
+
         },
         error: function (user, error) {
           alert("WOAH. Something went wrong! Try again?")
         }
       });
-
-
 
     }
   });

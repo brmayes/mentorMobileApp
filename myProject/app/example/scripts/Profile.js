@@ -6,6 +6,9 @@ angular
     //bringing user's name, major and class in
     var currentUserName = Parse.User.current().escape("username");
     document.getElementById("userProfileName").innerHTML = currentUserName;
+    var profilePictureURL = Parse.User.current().escape("profilePicture");
+    var profilePicture = "<img class='userProfilePicture' src='" + profilePictureURL + "'>";
+    document.getElementById("profilePicture").innerHTML = profilePicture;
 
     var currentUserMajor = "Replace with major";
     //Parse.User.current().escape("major");
