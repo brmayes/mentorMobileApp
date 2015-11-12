@@ -4,23 +4,23 @@
  ***********************************************************/
 
 navigation-bar {
-  background-color: #00B5FF;
-  color: #ffffff;
+  background-color: #2f3440;
+  color: #F1F1F2;
 }
 
 navigation-bar title {
-  color: #ffffff;
+  color: #F1F1F2;
   font-size: 18px;
   font-weight: 600;
 }
 
 navigation-bar button, navigation-bar back-bar-button {
-  color: #ffffff;
+  color: #F1F1F2;
   font-weight: 300;
 }
 
 tab-bar {
-  background-color: #ffffff;
+  background-color: #F1F1F2;
   border-top: 1px #d8d8d8 solid;
 }
 
@@ -31,17 +31,26 @@ tab-bar tab-bar-item {
 }
 
 tab-bar tab-bar-item:selected {
-  color: #1596f7;
+  color: #000;
 }
 
-tab-bar-item#settings {
-  background-image: url(icons/cog.svg);
+tab-bar-item#home {
+  background-image: url(components/Ionicons/src/ios-home.svg);
 }
 
-tab-bar-item#index {
-  background-image: url(icons/home.svg);
+tab-bar-item#profile {
+  background-image: url(components/Ionicons/src/ios-people.svg);
 }
 
-tab-bar-item#internet {
-  background-image: url(icons/search.svg);
+tab-bar-item#calendar {
+  background-image: url(components/Ionicons/src/ios-calendar-outline.svg);
+}
+
+tab-bar-item#resources {
+  background-image: url(components/Ionicons/src/paperclip.svg);
+  /*background-image: url(components/Ionicons/src/paperclip.svg);*/
+}
+
+tab-bar-item#chat {
+  background-image: url(components/Ionicons/src/chatboxes.svg);
 }

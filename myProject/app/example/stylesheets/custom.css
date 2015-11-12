@@ -1,3 +1,15 @@
+/*GENERAL*/
+.no-padding {
+  padding: 0 !important;
+}
+.no-margin {
+  margin: 0 !important;
+}
+
+.border {
+  border: 1px solid black;
+}
+
 .supersonic-navbar-mock {
   background-color: #00B5FF !important;
   text-align: center;
@@ -6,16 +18,25 @@
 
 /*PROFILE PAGE SETTING*/
 .userProfilePicture {
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   display: block;
-  width: 170px;
-  heigh: 170px;
-  border-radius: 50%;
-  margin-top: 10px;
+  width: 100%;
+  heigh: auto;
+  /*border-radius: 50%;*/
+  /*margin-top: 10px;*/
 }
 
-.userProfileName, .userProfileMajor, .userProfileClass {
-  text-align: center;
+.profilePicture {
+  padding: 0 0 !important;
+  margin: 0 !important;
+}
+
+.userProfileName, .userProfileMajor, .userProfileClass, .userProfileRoleTeam {
+  text-align: left;
+}
+
+.userProfileBio {
+  min-height: 100px;
 }
 
 .profileTabsRow {
@@ -35,7 +56,7 @@
 }
 
 .profileTabsDivs {
-
+  min-height: 224px;
 }
 
 .editProfileMargin {

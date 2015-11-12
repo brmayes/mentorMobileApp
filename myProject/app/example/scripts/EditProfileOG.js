@@ -1,6 +1,6 @@
 angular
   .module('example')
-  .controller('EditProfile', function($scope) {
+  .controller('EditProfileOG', function($scope) {
 
     var currentUserName = Parse.User.current();
     var currentUserId = Parse.User.current().id;

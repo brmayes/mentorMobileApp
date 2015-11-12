@@ -4,7 +4,6 @@ angular
     supersonic.logger.log("Profile.js loaded");
 
     //bringing user's name, major and class in
-
     var currentUserName = Parse.User.current().escape("username");
     document.getElementById("userProfileName").innerHTML = currentUserName;
 
@@ -15,7 +14,6 @@ angular
     var currentUserClass = "Replace with class status"
       //Parse.User.current().escape("class");
     document.getElementById("userProfileClass").innerHTML = currentUserClass;
-
 
     //switcher operation
     $scope.state = "PERSONAL";
