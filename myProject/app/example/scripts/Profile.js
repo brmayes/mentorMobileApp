@@ -42,7 +42,7 @@ angular
           fullName = firstName + " " + lastName;
         role = user.get("role");
         teamNum = user.get("userTeamNum");
-          roleTeam = role + " - " + teamNum;
+          roleTeam = role + " - Team " + teamNum;
         classStatus = user.get("userClassStatus");
         bio = user.get("userBio");
         hometown = user.get("hometown");
@@ -70,7 +70,7 @@ angular
 
         document.getElementById("fullName").innerHTML = fullName;
         document.getElementById("bio").innerHTML = bio;
-        document.getElementById("hometown").innerHTML = hometown;
+        // document.getElementById("hometown").innerHTML = hometown;
         document.getElementById("roleTeam").innerHTML = roleTeam;
         document.getElementById("classStatus").innerHTML = classStatus;
         document.getElementById("primaryMajor").innerHTML = primaryMajor;
@@ -91,20 +91,20 @@ angular
 
 
     //switcher operation
-    $scope.state = "PERSONAL";
+    $scope.state = "ACADEMICS";
 
-    $scope.profilePersonal = function() {
-      $scope.state = "PERSONAL";
-      supersonic.logger.info("personal");
-    }
+    // $scope.profilePersonal = function() {
+    //   $scope.state = "PERSONAL";
+    //   supersonic.logger.info("personal");
+    // }
     $scope.profileAcademics = function() {
       $scope.state = "ACADEMICS";
       supersonic.logger.info("academics");
     }
-    $scope.profileContact = function() {
-      $scope.state = "CONTACT";
-      supersonic.logger.info("contact");
-    }
+    // $scope.profileContact = function() {
+    //   $scope.state = "CONTACT";
+    //   supersonic.logger.info("contact");
+    // }
     $scope.profileConnect = function() {
       $scope.state = "CONNECT";
       supersonic.logger.info("connect");

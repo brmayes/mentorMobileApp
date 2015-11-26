@@ -1,6 +1,7 @@
+<div ng-controller="Profile">
 <super-navbar>
   <super-navbar-title>
-    Profile
+    My Profile
   </super-navbar-title>
   <super-navbar-button side="right" location="example#edit-profile">
     Edit
@@ -8,49 +9,39 @@
 </super-navbar>
 
 
-<div ng-controller="Profile">
+  <div class="row">
+    <div class="col profilePicture">
+      <div class="profile-top"></div>
+      <div id="profilePicture"></div>
+    </div>
+  </div>
+
+  <div class="profileBox"></div>
+
 
 <div class="row no-padding">
-  <div class="col profilePicture border">
-    <div id="profilePicture"></div>
-  </div>
-  <div class="col profileTop border">
+  <div class="col basicInfo">
     <h3 id="fullName" class="fullName"></h3>
-    <h4 id="hometown" class="hometown"></h4>
-    <h4 id="userProfileClass" class="userProfileClass"></h4>
-    <h4 id="roleTeam"></h4>
+    <!-- <span id="hometown" class="hometown"></span> -->
+    <span id="roleTeam"></span>
   </div>
 </div>
-
 <div class="row no-padding">
-  <div class="col userProfileBio border">
+  <div class="col userBio">
     <p id="bio"></p>
   </div>
 </div>
 <!-- TABS  -->
-<div class="row profileTabsRow border">
-  <div class="col profileTabs"></div>
+<div class="row profileTabsRow">
   <div class="col profileTabs">
-    <button ng-click="profilePersonal()" class="button button-icon icon super-ios-person"></button>
+    <button ng-click="profileAcademics()" class="button button-icon">ACADEMICS</button>
   </div>
   <div class="col profileTabs">
-    <button ng-click="profileAcademics()" class="button button-icon icon super-university"></button>
+    <button ng-click="profileConnect()" class="button button-icon">CONNECT</button>
   </div>
-  <div class="col profileTabs">
-    <button ng-click="profileContact()" class="button button-icon icon super-email"></button>
-  </div>
-  <div class="col profileTabs">
-    <button ng-click="profileConnect()" class="button button-icon icon super-android-share-alt"></button>
-  </div>
-  <div class="col profileTabs"></div>
 </div>
 <!-- INSERT USER INFORMATION HERE -->
-  <div class="profileTabsDivs padding border">
-    <div ng-show="state == 'PERSONAL'">
-      <p>
-        PERSONAL INFORMATION
-      </p>
-    </div>
+<div class="profileTabsDivs padding">
     <div ng-show="state == 'ACADEMICS'">
       <p>
         ACADEMIC INFORMATION
@@ -63,11 +54,6 @@
       <p id="academicInterests"></p>
       <p id="campusInvolement"></p>
     </div>
-    <div ng-show="state == 'CONTACT'">
-      <p>
-        CONTACT INFORMATION
-      </p>
-    </div>
     <div ng-show="state == 'CONNECT'">
       <p>
         CONNECT INFORMATION
@@ -78,8 +64,8 @@
       <p id="twitter"></p>
       <p id="instagram"></p>
     </div>
-  <!-- </div> -->
 </div>
+<!-- </div> -->
 
 
 </div>

@@ -48,7 +48,6 @@ tab-bar-item#calendar {
 
 tab-bar-item#resources {
   background-image: url(components/Ionicons/src/paperclip.svg);
-  /*background-image: url(components/Ionicons/src/paperclip.svg);*/
 }
 
 tab-bar-item#chat {

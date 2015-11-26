@@ -23,12 +23,15 @@
 
 /*PROFILE PAGE SETTING*/
 .userProfilePicture {
-  /*margin: 0 auto;*/
+  margin: 0 auto;
   display: block;
   width: 100%;
-  heigh: auto;
-  /*border-radius: 50%;*/
-  /*margin-top: 10px;*/
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%;
+  margin-top: 10px;
+  position: absolute;
+  margin-left: 28%;
 }
 
 .profilePicture {
@@ -36,12 +39,41 @@
   margin: 0 !important;
 }
 
-.userProfileName, .userProfileMajor, .userProfileClass, .userProfileRoleTeam {
-  text-align: left;
+.profile-top {
+  background: #2f3440;
+  height: 90px;
+  width: 100%;
+  position: absolute;
+  margin-left: -5px;
+  margin-top: -5px;
 }
 
-.userProfileBio {
-  min-height: 100px;
+.profileBox {
+  height: 165px;
+}
+
+.basicInfo {
+  text-align: center;
+}
+
+#fullName {
+  margin-bottom: 0;
+}
+
+#hometown {
+  margin-top: 0;
+}
+
+#roleTeam {
+  margin-top: 0;
+}
+
+.userBio {
+  margin-top: 20px;
+}
+
+#bio {
+  text-align: center;
 }
 
 .profileTabsRow {
@@ -49,21 +81,31 @@
   text-align: center;
 }
 
-.profileTabs {
-  /*border: 1px solid black;*/
-  height: 50px;
+
+
+/*.userProfileName, .userProfileMajor, .userProfileClass, .userProfileRoleTeam {
+  text-align: left;
 }
 
-.profileTabsLeft {
-  /*border-top: 3px solid black;*/
+.userProfileBio {
+  min-height: 100px;
+}
+*/
+
+/*
+.profileTabs {
+  height: 50px;
+}*/
+
+/*.profileTabsLeft {
   border-botom: 3px solid black;
   height: 50px;
-}
+}*/
 
-.profileTabsDivs {
+/*.profileTabsDivs {
   min-height: 224px;
 }
 
 .editProfileMargin {
   margin-bottom: 45px;
-}
+}*/
