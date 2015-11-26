@@ -3,11 +3,40 @@ angular
   .controller('EditProfile', function($scope) {
 
     var user = Parse.User.current();
-    var currentUserId = Parse.User.current().id;
-    var currentUserEmail = Parse.User.current().getEmail();
-    var currentUserRole = Parse.User.current().get("role");
+    var currentUserName = user.escape("username");
+    var currentUserId = user.id;
+    var currentUserEmail = user.getEmail();
+    var currentUserRole = user.get("role");
+    var profilePictureURL = user.escape("profilePicture");
+    var profilePicture = "<img class='userProfilePicture' src='" + profilePictureURL + "'>";
+
+    // //bringing user's name, major and class in
+    // document.getElementById("userProfileName").innerHTML = currentUserName;
+    // document.getElementById("profilePicture").innerHTML = profilePicture;
+    //
+    // //switcher operation
+    // $scope.state = "PERSONAL";
+    //
+    // $scope.profilePersonal = function() {
+    //   $scope.state = "PERSONAL";
+    //   supersonic.logger.info("personal");
+    // }
+    // $scope.profileAcademics = function() {
+    //   $scope.state = "ACADEMICS";
+    //   supersonic.logger.info("academics");
+    // }
+    // $scope.profileContact = function() {
+    //   $scope.state = "CONTACT";
+    //   supersonic.logger.info("contact");
+    // }
+    // $scope.profileConnect = function() {
+    //   $scope.state = "CONNECT";
+    //   supersonic.logger.info("connect");
+    // }
 
     $scope.profileUpdate = function(updateUserProfile) {
+      user.set("userFirstName", $scope.firstName);
+      user.set("userLastName", $scope.lastName);
 
       //bio
       user.set("userBio", $scope.bio);
@@ -37,24 +66,20 @@ angular
         success: function(user) {
           user.save();
           alert("User information updated!");
-            // var userBio = Parse.User.current().escape("userBio");
-            // document.getElementById("userBio").innerHTML = userBio;
-            // var currentUserName = Parse.User.current().escape("username");
-            // document.getElementById("userProfileName").innerHTML = currentUserName;
-            // var currentUserName = Parse.User.current().escape("username");
-            // document.getElementById("userProfileName").innerHTML = currentUserName;
-            // var currentUserName = Parse.User.current().escape("username");
-            // document.getElementById("userProfileName").innerHTML = currentUserName;
-            // var currentUserName = Parse.User.current().escape("username");
-            // document.getElementById("userProfileName").innerHTML = currentUserName;
-            // var currentUserName = Parse.User.current().escape("username");
-            // document.getElementById("userProfileName").innerHTML = currentUserName;
-            // var currentUserName = Parse.User.current().escape("username");
-            // document.getElementById("userProfileName").innerHTML = currentUserName;
-            // var currentUserName = Parse.User.current().escape("username");
-            // document.getElementById("userProfileName").innerHTML = currentUserName;
-            // var currentUserName = Parse.User.current().escape("username");
-            // document.getElementById("userProfileName").innerHTML = currentUserName;
+
+          user.fetch({
+            success: function(user) {
+              alert("pushed");
+              var userBio = Parse.User.current().escape("userBio");
+              supersonic.logger.info(userBio);
+              document.getElementById("userBio").innerHTML = "userBio";
+
+            },
+            error: function(user, error) {
+              alert("not pushed");
+            }
+
+          });
 
 
         },

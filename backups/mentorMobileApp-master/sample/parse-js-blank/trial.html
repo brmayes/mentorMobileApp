@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+
+		<h2>Contact Form</h2>
+
+		<form id="newUserForm">
+
+			<p>
+			<label for="name">Full Name:</label>
+			<input type="text" name="name" id="userName" required>
+			</p>
+
+			<p>
+			<label for="email">Email:</label>
+			<input type="email" name="email" id="userEmail" required>
+			</p>
+
+      <p>
+			<label for="password">Password:</label>
+			<input type="password" name="password" id="userPass" required>
+			</p>
+
+			<p>
+			<label for="role">Choose Role:
+			<select name="role" id="userRole">
+			<option value="mentee">Mentee</option>
+			<option value="mentor">Mentor</option>
+			<option value="admin">Administrator</option>
+			</select>
+			</label>
+			</p>
+
+			<p>
+			<input type="submit" value="Submit">
+			</p>
+		</form>
+
+		<script src="http://www.parsecdn.com/js/parse-1.2.12.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src="trial.js"></script>
+
+	</body>
+</html>

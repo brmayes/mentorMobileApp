@@ -8,6 +8,8 @@ angular
 
       var user = new Parse.User();
         user.set("username", $scope.userName);
+        user.set("firstName", $scope.firstName);
+        user.set("lastName", $scope.lastName);
         user.set("password", $scope.userPass);
         user.set("email", $scope.userEmail);
         user.set("role", $scope.userRole);
@@ -24,7 +26,6 @@ angular
               alert("Please check your inbox for a verification email.");
               supersonic.ui.View("example#getting-started");
               supersonic.ui.layers.push(view);
-              // WHY THE F DIDN'T THIS WORK
             },
             error: function(user, error) {
               // Show the error message somewhere and let the user try again.

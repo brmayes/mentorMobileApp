@@ -1,0 +1,79 @@
+<div ng-controller="Profile">
+
+  <super-navbar>
+    <super-navbar-title>
+      Profile
+    </super-navbar-title>
+    <super-navbar-button side="right" ng-click="editProfile()">
+      Edit
+    </super-navbar-button>
+  </super-navbar>
+
+
+<div class="row no-padding">
+  <div class="col profilePicture border">
+    <div id="profilePicture"></div>
+  </div>
+  <div class="col profileTop border">
+    <h3 id="userProfileName" class="userProfileName"></h3>
+    <!-- <h4 id="userProfileMajor" class="userProfileMajor"></h4>
+    <h4 id="userProfileClass" class="userProfileClass"></h4>
+    <h4 id="userRoleAndTeam"></h4> -->
+  </div>
+</div>
+<div class="row no-padding">
+  <div class="col userProfileBio border">
+    <div id="userBio"></div>
+  </div>
+</div>
+<!-- TABS  -->
+<div class="row profileTabsRow border">
+  <div class="col profileTabs"></div>
+  <div class="col profileTabs">
+    <button ng-click="profilePersonal()" class="button button-icon icon super-ios-person"></button>
+  </div>
+  <div class="col profileTabs">
+    <button ng-click="profileAcademics()" class="button button-icon icon super-university"></button>
+  </div>
+  <div class="col profileTabs">
+    <button ng-click="profileContact()" class="button button-icon icon super-email"></button>
+  </div>
+  <div class="col profileTabs">
+    <button ng-click="profileConnect()" class="button button-icon icon super-android-share-alt"></button>
+  </div>
+  <div class="col profileTabs"></div>
+</div>
+<!-- INSERT USER INFORMATION HERE -->
+  <div class="profileTabsDivs padding border">
+    <div ng-show="state == 'PERSONAL'">
+      <p>
+        PERSONAL INFORMATION
+      </p>
+    </div>
+    <div ng-show="state == 'ACADEMICS'">
+      <p>
+        ACADEMIC INFORMATION
+      </p>
+    </div>
+    <div ng-show="state == 'CONTACT'">
+      <p>
+        CONTACT INFORMATION
+      </p>
+    </div>
+    <div ng-show="state == 'CONNECT'">
+      <p>
+        CONNECT INFORMATION
+      </p>
+    </div>
+  <!-- </div> -->
+</div>
+
+
+
+
+
+
+
+
+
+</div>

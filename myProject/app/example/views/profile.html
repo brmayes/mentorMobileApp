@@ -1,14 +1,14 @@
+<super-navbar>
+  <super-navbar-title>
+    Profile
+  </super-navbar-title>
+  <super-navbar-button side="right" location="example#edit-profile">
+    Edit
+  </super-navbar-button>
+</super-navbar>
+
+
 <div ng-controller="Profile">
-
-  <super-navbar>
-    <super-navbar-title>
-      Profile
-    </super-navbar-title>
-    <super-navbar-button side="right" ng-click="editProfile()">
-      Edit
-    </super-navbar-button>
-  </super-navbar>
-
 
 <div class="row no-padding">
   <div class="col profilePicture border">
@@ -16,15 +16,16 @@
     <!-- <img class="userProfilePicture" src="http://dummyimage.com/200x200/000/dceb36&text=Profile+Image"> -->
   </div>
   <div class="col profileTop border">
-    <h3 id="userProfileName" class="userProfileName"></h3>
+    <h3 id="fullName" class="fullName"></h3>
     <h4 id="userProfileMajor" class="userProfileMajor"></h4>
     <h4 id="userProfileClass" class="userProfileClass"></h4>
     <h4 id="userRoleAndTeam"></h4>
   </div>
 </div>
+
 <div class="row no-padding">
   <div class="col userProfileBio border">
-    <div id="userBio"></div>
+    <p id="bio"></p>
   </div>
 </div>
 <!-- TABS  -->
@@ -50,6 +51,21 @@
       <p>
         PERSONAL INFORMATION
       </p>
+      <p id="teamNum"></p>
+      <p id="classStatus"></p>
+      <p id="primaryMajor"></p>
+      <p id="doubleMajor"></p>
+      <p id="primaryMinor"></p>
+      <p id="doubleMinor"></p>
+      <p id="academicInterests"></p>
+      <p id="campusInvolement"></p>
+      <p id="phoneNum"></p>
+      <p id="personalEmail"></p>
+      <p id="linkedIn"></p>
+      <p id="facebook"></p>
+      <p id="twitter"></p>
+      <p id="instagram"></p>
+      <p id="snapChat"></p>
     </div>
     <div ng-show="state == 'ACADEMICS'">
       <p>
@@ -68,13 +84,6 @@
     </div>
   <!-- </div> -->
 </div>
-
-
-
-
-
-
-
 
 
 </div>

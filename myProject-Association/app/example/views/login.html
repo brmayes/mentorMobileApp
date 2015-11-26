@@ -1,0 +1,31 @@
+<super-navbar>
+  <super-navbar-title>
+    Log In
+  </super-navbar-title>
+</super-navbar>
+
+<div class="padding">
+
+<h2>Log In</h2>
+
+  <div ng-controller="FormController">
+
+    <form name="loginForm">
+      <div class="form-group">
+        <label class="item item-input" for="userName">
+          <input type="text" placeholder="User Name" name="userName" ng-model="userName" class="form-control" required />
+        </label>
+        <!-- <label class="item item-input" for="userEmail">
+          <input type="text" placeholder="Email" name="userEmail" ng-model="userEmail" class="form-control" required />
+        </label> -->
+        <label class="item item-input" for="userPass">
+          <input type="text" placeholder="Password" name="userPass" ng-model="userPass" class="form-control" required />
+        </label>
+      </div>
+
+      <button ng-click="logFormParse(loginForm)" class="button button-block button-positive">Submit</button>
+    </form>
+
+  </div>
+
+</div>

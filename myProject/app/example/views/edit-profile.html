@@ -1,14 +1,9 @@
-<super-navbar>
-  <super-navbar-title>
-    Edit Profile
-  </super-navbar-title>
-</super-navbar>
-
-<!-- <div class="padding"> -->
-
-
-
 <div ng-controller="EditProfile">
+  <super-navbar>
+    <super-navbar-title>
+      Edit Profile
+    </super-navbar-title>
+  </super-navbar>
 
   <div class="editProfileMargin">
   <h4 style="text-align:center; margin-top:15px; margin-bottom:15px;">Basic Information</h4>
@@ -16,37 +11,37 @@
     <div class="form-group list">
       <label class="item item-input item-stacked-label" for="userName">
         <span class="input-label">Full Name</span>
-        <input type="text" placeholder="First and Last Name" name="userName" ng-model="userName" class="form-control" required />
+        <input style="background-color : #F1F1F2;" type="text" placeholder="First and Last Name" name="userName" ng-model="userName" class="form-control" required />
       </label>
       <label class="item item-input item-stacked-label" for="userEmail">
         <span class="input-label">Email Address</span>
-        <input type="text" placeholder="onyen@live.unc.edu" name="userEmail" ng-model="userEmail" class="form-control" required />
+        <input style="background-color : #F1F1F2;" type="text" placeholder="onyen@live.unc.edu" name="userEmail" ng-model="userEmail" class="form-control" required />
       </label>
       <label class="item item-input item-stacked-label" for="userPass">
         <span class="input-label">Password</span>
-        <input type="text" placeholder="Password" name="userPass" ng-model="userPass" class="form-control" required />
+        <input style="background-color : #F1F1F2;" type="text" placeholder="Password" name="userPass" ng-model="userPass" class="form-control" required />
       </label>
       <label class="item item-input item-stacked-label" for="userRole">
         <span class="input-label">Role</span>
-        <input type="text" placeholder="Role" name="userPass" ng-model="userPass" class="form-control" required />
+        <input style="background-color : #F1F1F2;" type="text" placeholder="Role" name="userPass" ng-model="userPass" class="form-control" required />
       </label>
       <label class="item item-input item-select" for="teamNum">
         <div class="input-label">
           Team Number
         </div>
         <select required name="teamNum" ng-model="teamNum" class="form-control" />
-          <option value="one">1</option>
-          <option value="two">2</option>
-          <option value="three">3</option>
-          <option value="four">4</option>
-          <option value="five">5</option>
-          <option value="six">6</option>
-          <option value="seven">7</option>
-          <option value="eight">8</option>
-          <option value="nine">9</option>
-          <option value="ten">10</option>
-          <option value="eleven">11</option>
-          <option value="twelve">12</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
         </select>
       </label>
     </div>
@@ -68,10 +63,10 @@
           Class Status
         </div>
         <select required name="classStatus" ng-model="classStatus" class="form-control" />
-          <option value="firstYear">First Year</option>
-          <option value="sophomore">Sophomore</option>
-          <option value="junior">Junior</option>
-          <option value="senior">Senior</option>
+          <option value="First Year">First Year</option>
+          <option value="Sophomore">Sophomore</option>
+          <option value="Junior">Junior</option>
+          <option value="Senior">Senior</option>
         </select>
       </label>
       <label class="item item-input item-select" for="userMajor">
@@ -79,108 +74,108 @@
           Major
         </div>
         <select required name="userMajor" ng-model="userMajor" class="form-control" />
-        <option selected value="undecided">Undecided</option>
-        <option disabled value="arts">Arts</option>
-        <option value="art history">Art History</option>
-        <option value="dramatic art">Dramatic Art</option>
-        <option value="music">Music</option>
-        <option value="studio art">Studio Art</option>
-        <option disabled value="biological and health sciences">Biological and Health Sciences</option>
-        <option value="biology">Biology</option>
-        <option value="clinical laboratory science">Clinical Laboratory Science</option>
-        <option value="dental hygiene">Dental Hygiene</option>
-        <option value="environmental sciences">Environmental Sciences</option>
-        <option value="exercise and sport science">Exercise and Sport Science</option>
-        <option value="nursing">Nursing</option>
-        <option value="pharmacy">Pharmacy</option>
-        <option value="pre-health (pre-dental, pre-med, pre-optometry, pre-veterinary)">Pre-Health (Pre-Dental, Pre-Med, Pre-Optometry, Pre-Veterinary)</option>
-        <option value="psychology (behavioral, clinical, or cognitive)">Psychology (Behavioral, Clinical, or Cognitive)</option>
-        <option value="public health (biostatistics, environmental health sciences, health policy and management, and nutrition)">Public Health (Biostatistics, Environmental Health Sciences, Health Policy and Management, and Nutrition)</option>
-        <option value="radiologic science">Radiologic Science</option>
-        <option value="speech and hearing sciences">Speech and Hearing Sciences</option>
-        <option disabled value="business">Business</option>
-        <option value="consulting">Consulting</option>
-        <option value="entrepreneurship">Entrepreneurship</option>
-        <option value="finance/investments">Finance/Investments</option>
-        <option value="general management">General Management</option>
-        <option value="international business">International Business</option>
-        <option value="marketing management">Marketing Management</option>
-        <option value="operations">Operations</option>
-        <option value="real estate">Real Estate</option>
-        <option value="sales">Sales</option>
-        <option disabled value="education">Education</option>
-        <option value="music education and unc best">Music Education or UNC Best (Science, Math and Education)</option>
-        <option value="elementary education, middle grades education, and secondary education">Elementary Education, Middle Grades Education, and Secondary Education Five-Year Bachelor-Master’s Program</option>
-        <option disabled value="humanities">Humanities</option>
-        <option value="african, african american, and diaspora studies (including arabic, lingala, swahili, and wolof)">African, African American, and Diaspora Studies (including Arabic, Lingala, Swahili, and Wolof)</option>
-        <option value="american studies (including american indian studies, folklore, international american studies, and southern studies)">American Studies (including American Indian Studies, Folklore, International American Studies, and Southern Studies)</option>
-        <option value="asian studies (including arabic, chinese, modern hebrew, hindi-urdu, japanese, korean, persian, and turkish)">Asian Studies (including Arabic, Chinese, Modern Hebrew, Hindi-Urdu, Japanese, Korean, Persian, and Turkish)</option>
-        <option value="classics (including classical archaeology, classical humanities, greek, and latin)">Classics (including Classical Archaeology, Classical Humanities, Greek, and Latin)</option>
-        <option value="communication studies">Communication Studies</option>
-        <option value="comparative literature (including international literature and global cinema)">Comparative Literature (including International Literature and Global Cinema)</option>
-        <option value="creative writing">Creative Writing</option>
-        <option value="english">English</option>
-        <option value="germanic and slavic languages and literatures (including bosnian-croatian-serbian, czech, dutch, german, hungarian, polish, and russian)">Germanic and Slavic Languages and Literatures (including Bosnian-Croatian-Serbian, Czech, Dutch, German, Hungarian, Polish, and Russian)</option>
-        <option value="interdisciplinary studies">Interdisciplinary Studies</option>
-        <option value="latin american studies">Latin American Studies</option>
-        <option value="latina/o studies">Latina/o Studies</option>
-        <option value="linguistics">Linguistics</option>
-        <option value="medieval and early modern studies">Medieval and Early Modern Studies</option>
-        <option value="philosophy">Philosophy</option>
-        <option value="philosophy, politics, and economics">Philosophy, Politics, and Economics</option>
-        <option value="pre-law">Pre-Law</option>
-        <option value="religious studies (including jewish studies)">Religious Studies (including Jewish Studies)</option>
-        <option value="romance languages and literatures (including french, italian, hispanic linguistics, hispanic literature and cultures, and portuguese)">Romance Languages and Literatures (including French, Italian, Hispanic Linguistics, Hispanic Literature and Cultures, and Portuguese)</option>
-        <option value="sexuality studies">Sexuality Studies</option>
-        <option value="women’s and gender studies">Women’s and Gender Studies</option>
-        <option value="writing for the screen and stage">Writing for the Screen and Stage</option>
-        <option disabled value="media and journalism">Media and Journalism</option>
-        <option value="advertising">Advertising</option>
-        <option value="broadcast journalism and electronic communication">Broadcast Journalism & Electronic Communication</option>
-        <option value="business journalism">Business Journalism</option>
-        <option value="electronic communication">Electronic Communication</option>
-        <option value="multimedia">Multimedia</option>
-        <option value="photojournalism">Photojournalism</option>
-        <option value="public relations">Public Relations</option>
-        <option value="reporting">Reporting</option>
-        <option value="strategic communication">Strategic Communication</option>
-        <option disabled value="mathematics, computing, and engineering">Mathematics, Computing, and Engineering</option>
-        <option value="biomedical engineering">Biomedical Engineering</option>
-        <option value="computer science">Computer Science</option>
-        <option value="mathematical decision sciences">Mathematical Decision Sciences</option>
-        <option value="mathematics">Mathematics</option>
-        <option value="statistics">Statistics</option>
-        <option disabled value="physical sciences">Physical Sciences</option>
-        <option value="biochemistry">Biochemistry</option>
-        <option value="chemistry">Chemistry</option>
-        <option value="physics and astronomy">Physics and Astronomy</option>
-        <option value="marine sciences">Marine Sciences</option>
-        <option value="geology">Geology</option>
-        <option value="geography (environment and physical systems)">Geography (Environment and Physical Systems)</option>
-        <option disabled value="social sciences">Social Sciences</option>
-        <option value="aerospace studies">Aerospace Studies</option>
-        <option value="anthropology">Anthropology</option>
-        <option value="archaeology">Archaeology</option>
-        <option value="asian studies">Asian Studies</option>
-        <option value="contemporary european studies">Contemporary European Studies</option>
-        <option value="city and regional planning">City and Regional Planning</option>
-        <option value="economics">Economics</option>
-        <option value="environmental studies">Environmental Studies</option>
-        <option value="geography (social and cultural)">Geography (Social and Cultural)</option>
-        <option value="global studies">Global Studies</option>
-        <option value="history">History</option>
-        <option value="information science">Information Science</option>
-        <option value="latin american studies">Latin American Studies</option>
-        <option value="management and society">Management and Society</option>
-        <option value="military science">Military Science</option>
-        <option value="naval science">Naval Science</option>
-        <option value="peace, war, and defense">Peace, War, and Defense</option>
-        <option value="political science">Political Science</option>
-        <option value="psychology (developmental and social)">Psychology (Developmental and Social)</option>
-        <option value="public policy">Public Policy</option>
-        <option value="social and economic justice">Social and Economic Justice</option>
-        <option value="sociology">Sociology</option>
-        <option value="sustainability studies">Sustainability Studies</option>
+          <option selected value="Undecided">Undecided</option>
+          <option disabled value="Arts">Arts</option>
+          <option value="Art History">Art History</option>
+          <option value="Dramatic Art">Dramatic Art</option>
+          <option value="Music">Music</option>
+          <option value="Studio Art">Studio Art</option>
+          <option disabled value="Biological And Health Sciences">Biological And Health Sciences</option>
+          <option value="Biology">Biology</option>
+          <option value="Clinical Laboratory Science">Clinical Laboratory Science</option>
+          <option value="Dental Hygiene">Dental Hygiene</option>
+          <option value="Environmental Sciences">Environmental Sciences</option>
+          <option value="Exercise And Sport Science">Exercise And Sport Science</option>
+          <option value="Nursing">Nursing</option>
+          <option value="Pharmacy">Pharmacy</option>
+          <option value="Pre-Health (Pre-Dental, Pre-Med, Pre-Optometry, Pre-Veterinary)">Pre-Health (Pre-Dental, Pre-Med, Pre-Optometry, Pre-Veterinary)</option>
+          <option value="Psychology (Behavioral, Clinical, Or Cognitive)">Psychology (Behavioral, Clinical, Or Cognitive)</option>
+          <option value="Public Health (Biostatistics, Environmental Health Sciences, Health Policy And Management, And Nutrition)">Public Health (Biostatistics, Environmental Health Sciences, Health Policy And Management, And Nutrition)</option>
+          <option value="Radiologic Science">Radiologic Science</option>
+          <option value="Speech And Hearing Sciences">Speech And Hearing Sciences</option>
+          <option disabled value="Business">Business</option>
+          <option value="Consulting">Consulting</option>
+          <option value="Entrepreneurship">Entrepreneurship</option>
+          <option value="Finance/Investments">Finance/Investments</option>
+          <option value="General Management">General Management</option>
+          <option value="International Business">International Business</option>
+          <option value="Marketing Management">Marketing Management</option>
+          <option value="Operations">Operations</option>
+          <option value="Real Estate">Real Estate</option>
+          <option value="Sales">Sales</option>
+          <option disabled value="Education">Education</option>
+          <option value="Music Education And Unc Best">Music Education And Unc Best</option>
+          <option value="Elementary Education, Middle Grades Education, And Secondary Education">Elementary Education, Middle Grades Education, And Secondary Education</option>
+          <option disabled value="Humanities">Humanities</option>
+          <option value="African, African American, And Diaspora Studies (Including Arabic, Lingala, Swahili, And Wolof)">African, African American, And Diaspora Studies (Including Arabic, Lingala, Swahili, And Wolof)</option>
+          <option value="American Studies (Including American Indian Studies, Folklore, International American Studies, And Southern Studies)">American Studies (Including American Indian Studies, Folklore, International American Studies, And Southern Studies)</option>
+          <option value="Asian Studies (Including Arabic, Chinese, Modern Hebrew, Hindi-Urdu, Japanese, Korean, Persian, And Turkish)">Asian Studies (Including Arabic, Chinese, Modern Hebrew, Hindi-Urdu, Japanese, Korean, Persian, And Turkish)</option>
+          <option value="Classics (Including Classical Archaeology, Classical Humanities, Greek, And Latin)">Classics (Including Classical Archaeology, Classical Humanities, Greek, And Latin)</option>
+          <option value="Communication Studies">Communication Studies</option>
+          <option value="Comparative Literature (Including International Literature And Global Cinema)">Comparative Literature (Including International Literature And Global Cinema)</option>
+          <option value="Creative Writing">Creative Writing</option>
+          <option value="English">English</option>
+          <option value="Germanic And Slavic Languages And Literatures (Including Bosnian-Croatian-Serbian, Czech, Dutch, German, Hungarian, Polish, And Russian)">Germanic And Slavic Languages And Literatures (Including Bosnian-Croatian-Serbian, Czech, Dutch, German, Hungarian, Polish, And Russian)</option>
+          <option value="Interdisciplinary Studies">Interdisciplinary Studies</option>
+          <option value="Latin American Studies">Latin American Studies</option>
+          <option value="Latina/O Studies">Latina/O Studies</option>
+          <option value="Linguistics">Linguistics</option>
+          <option value="Medieval And Early Modern Studies">Medieval And Early Modern Studies</option>
+          <option value="Philosophy">Philosophy</option>
+          <option value="Philosophy, Politics, And Economics">Philosophy, Politics, And Economics</option>
+          <option value="Pre-Law">Pre-Law</option>
+          <option value="Religious Studies (Including Jewish Studies)">Religious Studies (Including Jewish Studies)</option>
+          <option value="Romance Languages And Literatures (Including French, Italian, Hispanic Linguistics, Hispanic Literature And Cultures, And Portuguese)">Romance Languages And Literatures (Including French, Italian, Hispanic Linguistics, Hispanic Literature And Cultures, And Portuguese)</option>
+          <option value="Sexuality Studies">Sexuality Studies</option>
+          <option value="Women’S And Gender Studies">Women’S And Gender Studies</option>
+          <option value="Writing For The Screen And Stage">Writing For The Screen And Stage</option>
+          <option disabled value="Media And Journalism">Media And Journalism</option>
+          <option value="Advertising">Advertising</option>
+          <option value="Broadcast Journalism And Electronic Communication">Broadcast Journalism And Electronic Communication</option>
+          <option value="Business Journalism">Business Journalism</option>
+          <option value="Electronic Communication">Electronic Communication</option>
+          <option value="Multimedia">Multimedia</option>
+          <option value="Photojournalism">Photojournalism</option>
+          <option value="Public Relations">Public Relations</option>
+          <option value="Reporting">Reporting</option>
+          <option value="Strategic Communication">Strategic Communication</option>
+          <option disabled value="Mathematics, Computing, And Engineering">Mathematics, Computing, And Engineering</option>
+          <option value="Biomedical Engineering">Biomedical Engineering</option>
+          <option value="Computer Science">Computer Science</option>
+          <option value="Mathematical Decision Sciences">Mathematical Decision Sciences</option>
+          <option value="Mathematics">Mathematics</option>
+          <option value="Statistics">Statistics</option>
+          <option disabled value="Physical Sciences">Physical Sciences</option>
+          <option value="Biochemistry">Biochemistry</option>
+          <option value="Chemistry">Chemistry</option>
+          <option value="Physics And Astronomy">Physics And Astronomy</option>
+          <option value="Marine Sciences">Marine Sciences</option>
+          <option value="Geology">Geology</option>
+          <option value="Geography (Environment And Physical Systems)">Geography (Environment And Physical Systems)</option>
+          <option disabled value="Social Sciences">Social Sciences</option>
+          <option value="Aerospace Studies">Aerospace Studies</option>
+          <option value="Anthropology">Anthropology</option>
+          <option value="Archaeology">Archaeology</option>
+          <option value="Asian Studies">Asian Studies</option>
+          <option value="Contemporary European Studies">Contemporary European Studies</option>
+          <option value="City And Regional Planning">City And Regional Planning</option>
+          <option value="Economics">Economics</option>
+          <option value="Environmental Studies">Environmental Studies</option>
+          <option value="Geography (Social And Cultural)">Geography (Social And Cultural)</option>
+          <option value="Global Studies">Global Studies</option>
+          <option value="History">History</option>
+          <option value="Information Science">Information Science</option>
+          <option value="Latin American Studies">Latin American Studies</option>
+          <option value="Management And Society">Management And Society</option>
+          <option value="Military Science">Military Science</option>
+          <option value="Naval Science">Naval Science</option>
+          <option value="Peace, War, And Defense">Peace, War, And Defense</option>
+          <option value="Political Science">Political Science</option>
+          <option value="Psychology (Developmental And Social)">Psychology (Developmental And Social)</option>
+          <option value="Public Policy">Public Policy</option>
+          <option value="Social And Economic Justice">Social And Economic Justice</option>
+          <option value="Sociology">Sociology</option>
+          <option value="Sustainability Studies">Sustainability Studies</option>
         </select>
       </label>
       <label class="item item-input item-select" for="userDoubleMajor">
@@ -188,108 +183,108 @@
           Second Major (If applicable)
         </div>
         <select name="userDoubleMajor" ng-model="userDoubleMajor" class="form-control" />
-        <option selected value="undecided">Undecided</option>
-        <option disabled value="arts">Arts</option>
-        <option value="art history">Art History</option>
-        <option value="dramatic art">Dramatic Art</option>
-        <option value="music">Music</option>
-        <option value="studio art">Studio Art</option>
-        <option disabled value="biological and health sciences">Biological and Health Sciences</option>
-        <option value="biology">Biology</option>
-        <option value="clinical laboratory science">Clinical Laboratory Science</option>
-        <option value="dental hygiene">Dental Hygiene</option>
-        <option value="environmental sciences">Environmental Sciences</option>
-        <option value="exercise and sport science">Exercise and Sport Science</option>
-        <option value="nursing">Nursing</option>
-        <option value="pharmacy">Pharmacy</option>
-        <option value="pre-health (pre-dental, pre-med, pre-optometry, pre-veterinary)">Pre-Health (Pre-Dental, Pre-Med, Pre-Optometry, Pre-Veterinary)</option>
-        <option value="psychology (behavioral, clinical, or cognitive)">Psychology (Behavioral, Clinical, or Cognitive)</option>
-        <option value="public health (biostatistics, environmental health sciences, health policy and management, and nutrition)">Public Health (Biostatistics, Environmental Health Sciences, Health Policy and Management, and Nutrition)</option>
-        <option value="radiologic science">Radiologic Science</option>
-        <option value="speech and hearing sciences">Speech and Hearing Sciences</option>
-        <option disabled value="business">Business</option>
-        <option value="consulting">Consulting</option>
-        <option value="entrepreneurship">Entrepreneurship</option>
-        <option value="finance/investments">Finance/Investments</option>
-        <option value="general management">General Management</option>
-        <option value="international business">International Business</option>
-        <option value="marketing management">Marketing Management</option>
-        <option value="operations">Operations</option>
-        <option value="real estate">Real Estate</option>
-        <option value="sales">Sales</option>
-        <option disabled value="education">Education</option>
-        <option value="music education and unc best">Music Education or UNC Best (Science, Math and Education)</option>
-        <option value="elementary education, middle grades education, and secondary education">Elementary Education, Middle Grades Education, and Secondary Education Five-Year Bachelor-Master’s Program</option>
-        <option disabled value="humanities">Humanities</option>
-        <option value="african, african american, and diaspora studies (including arabic, lingala, swahili, and wolof)">African, African American, and Diaspora Studies (including Arabic, Lingala, Swahili, and Wolof)</option>
-        <option value="american studies (including american indian studies, folklore, international american studies, and southern studies)">American Studies (including American Indian Studies, Folklore, International American Studies, and Southern Studies)</option>
-        <option value="asian studies (including arabic, chinese, modern hebrew, hindi-urdu, japanese, korean, persian, and turkish)">Asian Studies (including Arabic, Chinese, Modern Hebrew, Hindi-Urdu, Japanese, Korean, Persian, and Turkish)</option>
-        <option value="classics (including classical archaeology, classical humanities, greek, and latin)">Classics (including Classical Archaeology, Classical Humanities, Greek, and Latin)</option>
-        <option value="communication studies">Communication Studies</option>
-        <option value="comparative literature (including international literature and global cinema)">Comparative Literature (including International Literature and Global Cinema)</option>
-        <option value="creative writing">Creative Writing</option>
-        <option value="english">English</option>
-        <option value="germanic and slavic languages and literatures (including bosnian-croatian-serbian, czech, dutch, german, hungarian, polish, and russian)">Germanic and Slavic Languages and Literatures (including Bosnian-Croatian-Serbian, Czech, Dutch, German, Hungarian, Polish, and Russian)</option>
-        <option value="interdisciplinary studies">Interdisciplinary Studies</option>
-        <option value="latin american studies">Latin American Studies</option>
-        <option value="latina/o studies">Latina/o Studies</option>
-        <option value="linguistics">Linguistics</option>
-        <option value="medieval and early modern studies">Medieval and Early Modern Studies</option>
-        <option value="philosophy">Philosophy</option>
-        <option value="philosophy, politics, and economics">Philosophy, Politics, and Economics</option>
-        <option value="pre-law">Pre-Law</option>
-        <option value="religious studies (including jewish studies)">Religious Studies (including Jewish Studies)</option>
-        <option value="romance languages and literatures (including french, italian, hispanic linguistics, hispanic literature and cultures, and portuguese)">Romance Languages and Literatures (including French, Italian, Hispanic Linguistics, Hispanic Literature and Cultures, and Portuguese)</option>
-        <option value="sexuality studies">Sexuality Studies</option>
-        <option value="women’s and gender studies">Women’s and Gender Studies</option>
-        <option value="writing for the screen and stage">Writing for the Screen and Stage</option>
-        <option disabled value="media and journalism">Media and Journalism</option>
-        <option value="advertising">Advertising</option>
-        <option value="broadcast journalism and electronic communication">Broadcast Journalism & Electronic Communication</option>
-        <option value="business journalism">Business Journalism</option>
-        <option value="electronic communication">Electronic Communication</option>
-        <option value="multimedia">Multimedia</option>
-        <option value="photojournalism">Photojournalism</option>
-        <option value="public relations">Public Relations</option>
-        <option value="reporting">Reporting</option>
-        <option value="strategic communication">Strategic Communication</option>
-        <option disabled value="mathematics, computing, and engineering">Mathematics, Computing, and Engineering</option>
-        <option value="biomedical engineering">Biomedical Engineering</option>
-        <option value="computer science">Computer Science</option>
-        <option value="mathematical decision sciences">Mathematical Decision Sciences</option>
-        <option value="mathematics">Mathematics</option>
-        <option value="statistics">Statistics</option>
-        <option disabled value="physical sciences">Physical Sciences</option>
-        <option value="biochemistry">Biochemistry</option>
-        <option value="chemistry">Chemistry</option>
-        <option value="physics and astronomy">Physics and Astronomy</option>
-        <option value="marine sciences">Marine Sciences</option>
-        <option value="geology">Geology</option>
-        <option value="geography (environment and physical systems)">Geography (Environment and Physical Systems)</option>
-        <option disabled value="social sciences">Social Sciences</option>
-        <option value="aerospace studies">Aerospace Studies</option>
-        <option value="anthropology">Anthropology</option>
-        <option value="archaeology">Archaeology</option>
-        <option value="asian studies">Asian Studies</option>
-        <option value="contemporary european studies">Contemporary European Studies</option>
-        <option value="city and regional planning">City and Regional Planning</option>
-        <option value="economics">Economics</option>
-        <option value="environmental studies">Environmental Studies</option>
-        <option value="geography (social and cultural)">Geography (Social and Cultural)</option>
-        <option value="global studies">Global Studies</option>
-        <option value="history">History</option>
-        <option value="information science">Information Science</option>
-        <option value="latin american studies">Latin American Studies</option>
-        <option value="management and society">Management and Society</option>
-        <option value="military science">Military Science</option>
-        <option value="naval science">Naval Science</option>
-        <option value="peace, war, and defense">Peace, War, and Defense</option>
-        <option value="political science">Political Science</option>
-        <option value="psychology (developmental and social)">Psychology (Developmental and Social)</option>
-        <option value="public policy">Public Policy</option>
-        <option value="social and economic justice">Social and Economic Justice</option>
-        <option value="sociology">Sociology</option>
-        <option value="sustainability studies">Sustainability Studies</option>
+        <option selected value="Undecided">Undecided</option>
+        <option disabled value="Arts">Arts</option>
+        <option value="Art History">Art History</option>
+        <option value="Dramatic Art">Dramatic Art</option>
+        <option value="Music">Music</option>
+        <option value="Studio Art">Studio Art</option>
+        <option disabled value="Biological And Health Sciences">Biological And Health Sciences</option>
+        <option value="Biology">Biology</option>
+        <option value="Clinical Laboratory Science">Clinical Laboratory Science</option>
+        <option value="Dental Hygiene">Dental Hygiene</option>
+        <option value="Environmental Sciences">Environmental Sciences</option>
+        <option value="Exercise And Sport Science">Exercise And Sport Science</option>
+        <option value="Nursing">Nursing</option>
+        <option value="Pharmacy">Pharmacy</option>
+        <option value="Pre-Health (Pre-Dental, Pre-Med, Pre-Optometry, Pre-Veterinary)">Pre-Health (Pre-Dental, Pre-Med, Pre-Optometry, Pre-Veterinary)</option>
+        <option value="Psychology (Behavioral, Clinical, Or Cognitive)">Psychology (Behavioral, Clinical, Or Cognitive)</option>
+        <option value="Public Health (Biostatistics, Environmental Health Sciences, Health Policy And Management, And Nutrition)">Public Health (Biostatistics, Environmental Health Sciences, Health Policy And Management, And Nutrition)</option>
+        <option value="Radiologic Science">Radiologic Science</option>
+        <option value="Speech And Hearing Sciences">Speech And Hearing Sciences</option>
+        <option disabled value="Business">Business</option>
+        <option value="Consulting">Consulting</option>
+        <option value="Entrepreneurship">Entrepreneurship</option>
+        <option value="Finance/Investments">Finance/Investments</option>
+        <option value="General Management">General Management</option>
+        <option value="International Business">International Business</option>
+        <option value="Marketing Management">Marketing Management</option>
+        <option value="Operations">Operations</option>
+        <option value="Real Estate">Real Estate</option>
+        <option value="Sales">Sales</option>
+        <option disabled value="Education">Education</option>
+        <option value="Music Education And Unc Best">Music Education And Unc Best</option>
+        <option value="Elementary Education, Middle Grades Education, And Secondary Education">Elementary Education, Middle Grades Education, And Secondary Education</option>
+        <option disabled value="Humanities">Humanities</option>
+        <option value="African, African American, And Diaspora Studies (Including Arabic, Lingala, Swahili, And Wolof)">African, African American, And Diaspora Studies (Including Arabic, Lingala, Swahili, And Wolof)</option>
+        <option value="American Studies (Including American Indian Studies, Folklore, International American Studies, And Southern Studies)">American Studies (Including American Indian Studies, Folklore, International American Studies, And Southern Studies)</option>
+        <option value="Asian Studies (Including Arabic, Chinese, Modern Hebrew, Hindi-Urdu, Japanese, Korean, Persian, And Turkish)">Asian Studies (Including Arabic, Chinese, Modern Hebrew, Hindi-Urdu, Japanese, Korean, Persian, And Turkish)</option>
+        <option value="Classics (Including Classical Archaeology, Classical Humanities, Greek, And Latin)">Classics (Including Classical Archaeology, Classical Humanities, Greek, And Latin)</option>
+        <option value="Communication Studies">Communication Studies</option>
+        <option value="Comparative Literature (Including International Literature And Global Cinema)">Comparative Literature (Including International Literature And Global Cinema)</option>
+        <option value="Creative Writing">Creative Writing</option>
+        <option value="English">English</option>
+        <option value="Germanic And Slavic Languages And Literatures (Including Bosnian-Croatian-Serbian, Czech, Dutch, German, Hungarian, Polish, And Russian)">Germanic And Slavic Languages And Literatures (Including Bosnian-Croatian-Serbian, Czech, Dutch, German, Hungarian, Polish, And Russian)</option>
+        <option value="Interdisciplinary Studies">Interdisciplinary Studies</option>
+        <option value="Latin American Studies">Latin American Studies</option>
+        <option value="Latina/O Studies">Latina/O Studies</option>
+        <option value="Linguistics">Linguistics</option>
+        <option value="Medieval And Early Modern Studies">Medieval And Early Modern Studies</option>
+        <option value="Philosophy">Philosophy</option>
+        <option value="Philosophy, Politics, And Economics">Philosophy, Politics, And Economics</option>
+        <option value="Pre-Law">Pre-Law</option>
+        <option value="Religious Studies (Including Jewish Studies)">Religious Studies (Including Jewish Studies)</option>
+        <option value="Romance Languages And Literatures (Including French, Italian, Hispanic Linguistics, Hispanic Literature And Cultures, And Portuguese)">Romance Languages And Literatures (Including French, Italian, Hispanic Linguistics, Hispanic Literature And Cultures, And Portuguese)</option>
+        <option value="Sexuality Studies">Sexuality Studies</option>
+        <option value="Women’S And Gender Studies">Women’S And Gender Studies</option>
+        <option value="Writing For The Screen And Stage">Writing For The Screen And Stage</option>
+        <option disabled value="Media And Journalism">Media And Journalism</option>
+        <option value="Advertising">Advertising</option>
+        <option value="Broadcast Journalism And Electronic Communication">Broadcast Journalism And Electronic Communication</option>
+        <option value="Business Journalism">Business Journalism</option>
+        <option value="Electronic Communication">Electronic Communication</option>
+        <option value="Multimedia">Multimedia</option>
+        <option value="Photojournalism">Photojournalism</option>
+        <option value="Public Relations">Public Relations</option>
+        <option value="Reporting">Reporting</option>
+        <option value="Strategic Communication">Strategic Communication</option>
+        <option disabled value="Mathematics, Computing, And Engineering">Mathematics, Computing, And Engineering</option>
+        <option value="Biomedical Engineering">Biomedical Engineering</option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Mathematical Decision Sciences">Mathematical Decision Sciences</option>
+        <option value="Mathematics">Mathematics</option>
+        <option value="Statistics">Statistics</option>
+        <option disabled value="Physical Sciences">Physical Sciences</option>
+        <option value="Biochemistry">Biochemistry</option>
+        <option value="Chemistry">Chemistry</option>
+        <option value="Physics And Astronomy">Physics And Astronomy</option>
+        <option value="Marine Sciences">Marine Sciences</option>
+        <option value="Geology">Geology</option>
+        <option value="Geography (Environment And Physical Systems)">Geography (Environment And Physical Systems)</option>
+        <option disabled value="Social Sciences">Social Sciences</option>
+        <option value="Aerospace Studies">Aerospace Studies</option>
+        <option value="Anthropology">Anthropology</option>
+        <option value="Archaeology">Archaeology</option>
+        <option value="Asian Studies">Asian Studies</option>
+        <option value="Contemporary European Studies">Contemporary European Studies</option>
+        <option value="City And Regional Planning">City And Regional Planning</option>
+        <option value="Economics">Economics</option>
+        <option value="Environmental Studies">Environmental Studies</option>
+        <option value="Geography (Social And Cultural)">Geography (Social And Cultural)</option>
+        <option value="Global Studies">Global Studies</option>
+        <option value="History">History</option>
+        <option value="Information Science">Information Science</option>
+        <option value="Latin American Studies">Latin American Studies</option>
+        <option value="Management And Society">Management And Society</option>
+        <option value="Military Science">Military Science</option>
+        <option value="Naval Science">Naval Science</option>
+        <option value="Peace, War, And Defense">Peace, War, And Defense</option>
+        <option value="Political Science">Political Science</option>
+        <option value="Psychology (Developmental And Social)">Psychology (Developmental And Social)</option>
+        <option value="Public Policy">Public Policy</option>
+        <option value="Social And Economic Justice">Social And Economic Justice</option>
+        <option value="Sociology">Sociology</option>
+        <option value="Sustainability Studies">Sustainability Studies</option>
         </select>
       </label>
       <label class="item item-input item-select" for="userMinor">
@@ -298,86 +293,86 @@
         </div>
         <select name="userMinor" ng-model="userMinor" class="form-control" />
           <option disabled value=""></option>
-          <option value="aerospace studies">Aerospace studies</option>
-          <option value="african american and diaspora studies">African American and diaspora studies</option>
-          <option value="african studies">African studies</option>
-          <option value="american indian and indigenous studies">American Indian and indigenous studies</option>
-          <option value="american studies">American studies</option>
-          <option value="anthropology">Anthropology</option>
-          <option value="arabic">Arabic</option>
-          <option value="archaeology">Archaeology</option>
-          <option value="art history">Art history</option>
-          <option value="asian studies">Asian studies</option>
-          <option value="astronomy">Astronomy</option>
-          <option value="biology">Biology</option>
-          <option value="business administration">Business administration</option>
-          <option value="chemistry">Chemistry</option>
-          <option value="chinese">Chinese</option>
-          <option value="classical humanities">Classical humanities</option>
-          <option value="coaching education">Coaching education</option>
-          <option value="cognitive science">Cognitive science</option>
-          <option value="comparative literature">Comparative literature</option>
-          <option value="composition, rhetoric, and digital literacy">Composition, rhetoric, and digital literacy</option>
-          <option value="computer science">Computer science</option>
-          <option value="creative writing">Creative writing</option>
-          <option value="dramatic art">Dramatic art</option>
-          <option value="education">Education</option>
-          <option value="english">English</option>
-          <option value="entrepreneurship">Entrepreneurship</option>
-          <option value="environmental science and studies">Environmental science and studies</option>
-          <option value="exercise and sport science">Exercise and sport science</option>
-          <option value="folklore">Folklore</option>
-          <option value="french">French</option>
-          <option value="geography">Geography</option>
-          <option value="geology">Geology</option>
-          <option value="german">German</option>
-          <option value="global cinema">Global cinema</option>
-          <option value="greek">Greek</option>
-          <option value="hindi-urdu">Hindi-Urdu</option>
-          <option value="hispanic studies">Hispanic studies</option>
-          <option value="history">History</option>
-          <option value="information systems">Information systems</option>
-          <option value="international american studies">International American studies</option>
-          <option value="islamic and middle eastern studies">Islamic and Middle Eastern studies</option>
-          <option value="italian">Italian</option>
-          <option value="japanese">Japanese</option>
-          <option value="jewish studies">Jewish studies</option>
-          <option value="korean">Korean</option>
-          <option value="latin">Latin</option>
-          <option value="latina/o studies">Latina/o studies</option>
-          <option value="linguistics">Linguistics</option>
-          <option value="marine sciences">Marine sciences</option>
-          <option value="mathematical decision sciences">Mathematical decision sciences</option>
-          <option value="mathematics">Mathematics</option>
-          <option value="media and journalism">Media and journalism</option>
-          <option value="medical anthropology">Medical anthropology</option>
-          <option value="medicine, literature, and culture">Medicine, literature, and culture</option>
-          <option value="medieval and early modern studies">Medieval and early modern studies</option>
-          <option value="military science">Military science</option>
-          <option value="modern hebrew">Modern Hebrew</option>
-          <option value="music">Music</option>
-          <option value="naval science">Naval science</option>
-          <option value="neuroscience">Neuroscience</option>
-          <option value="philosophy">Philosophy</option>
-          <option value="philosophy, politics, and economics">Philosophy, politics, and economics</option>
-          <option value="physics">Physics</option>
-          <option value="portuguese">Portuguese</option>
-          <option value="public policy">Public policy</option>
-          <option value="recreation administration">Recreation administration</option>
-          <option value="religious studies">Religious studies</option>
-          <option value="russian culture">Russian culture</option>
-          <option value="sexuality studies">Sexuality studies</option>
-          <option value="slavic and east european cultures">Slavic and East European cultures</option>
-          <option value="social and economic justice">Social and economic justice</option>
-          <option value="southern studies">Southern studies</option>
-          <option value="spanish for the professions">Spanish for the professions</option>
-          <option value="speech and hearing sciences">Speech and hearing sciences</option>
-          <option value="studio art">Studio art</option>
-          <option value="study of christianity and culture">Study of Christianity and culture</option>
-          <option value="sustainability studies">Sustainability studies</option>
-          <option value="urban studies and planning">Urban studies and planning</option>
-          <option value="women’s and gender studies">Women’s and gender studies</option>
-          <option value="writing for the screen and stage">Writing for the screen and stage</option>
+          <option value="Aerospace Studies">Aerospace Studies</option>
+          <option value="African American And Diaspora Studies">African American And Diaspora Studies</option>
+          <option value="African Studies">African Studies</option>
+          <option value="American Indian And Indigenous Studies">American Indian And Indigenous Studies</option>
+          <option value="American Studies">American Studies</option>
+          <option value="Anthropology">Anthropology</option>
+          <option value="Arabic">Arabic</option>
+          <option value="Archaeology">Archaeology</option>
+          <option value="Art History">Art History</option>
+          <option value="Asian Studies">Asian Studies</option>
+          <option value="Astronomy">Astronomy</option>
+          <option value="Biology">Biology</option>
+          <option value="Business Administration">Business Administration</option>
+          <option value="Chemistry">Chemistry</option>
+          <option value="Chinese">Chinese</option>
+          <option value="Classical Humanities">Classical Humanities</option>
+          <option value="Coaching Education">Coaching Education</option>
+          <option value="Cognitive Science">Cognitive Science</option>
+          <option value="Comparative Literature">Comparative Literature</option>
+          <option value="Composition, Rhetoric, And Digital Literacy">Composition, Rhetoric, And Digital Literacy</option>
+          <option value="Computer Science">Computer Science</option>
+          <option value="Creative Writing">Creative Writing</option>
+          <option value="Dramatic Art">Dramatic Art</option>
+          <option value="Education">Education</option>
+          <option value="English">English</option>
+          <option value="Entrepreneurship">Entrepreneurship</option>
+          <option value="Environmental Science And Studies">Environmental Science And Studies</option>
+          <option value="Exercise And Sport Science">Exercise And Sport Science</option>
+          <option value="Folklore">Folklore</option>
+          <option value="French">French</option>
+          <option value="Geography">Geography</option>
+          <option value="Geology">Geology</option>
+          <option value="German">German</option>
+          <option value="Global Cinema">Global Cinema</option>
+          <option value="Greek">Greek</option>
+          <option value="Hindi-Urdu">Hindi-Urdu</option>
+          <option value="Hispanic Studies">Hispanic Studies</option>
+          <option value="History">History</option>
+          <option value="Information Systems">Information Systems</option>
+          <option value="International American Studies">International American Studies</option>
+          <option value="Islamic And Middle Eastern Studies">Islamic And Middle Eastern Studies</option>
+          <option value="Italian">Italian</option>
+          <option value="Japanese">Japanese</option>
+          <option value="Jewish Studies">Jewish Studies</option>
+          <option value="Korean">Korean</option>
+          <option value="Latin">Latin</option>
+          <option value="Latina/O Studies">Latina/O Studies</option>
+          <option value="Linguistics">Linguistics</option>
+          <option value="Marine Sciences">Marine Sciences</option>
+          <option value="Mathematical Decision Sciences">Mathematical Decision Sciences</option>
+          <option value="Mathematics">Mathematics</option>
+          <option value="Media And Journalism">Media And Journalism</option>
+          <option value="Medical Anthropology">Medical Anthropology</option>
+          <option value="Medicine, Literature, And Culture">Medicine, Literature, And Culture</option>
+          <option value="Medieval And Early Modern Studies">Medieval And Early Modern Studies</option>
+          <option value="Military Science">Military Science</option>
+          <option value="Modern Hebrew">Modern Hebrew</option>
+          <option value="Music">Music</option>
+          <option value="Naval Science">Naval Science</option>
+          <option value="Neuroscience">Neuroscience</option>
+          <option value="Philosophy">Philosophy</option>
+          <option value="Philosophy, Politics, And Economics">Philosophy, Politics, And Economics</option>
+          <option value="Physics">Physics</option>
+          <option value="Portuguese">Portuguese</option>
+          <option value="Public Policy">Public Policy</option>
+          <option value="Recreation Administration">Recreation Administration</option>
+          <option value="Religious Studies">Religious Studies</option>
+          <option value="Russian Culture">Russian Culture</option>
+          <option value="Sexuality Studies">Sexuality Studies</option>
+          <option value="Slavic And East European Cultures">Slavic And East European Cultures</option>
+          <option value="Social And Economic Justice">Social And Economic Justice</option>
+          <option value="Southern Studies">Southern Studies</option>
+          <option value="Spanish For The Professions">Spanish For The Professions</option>
+          <option value="Speech And Hearing Sciences">Speech And Hearing Sciences</option>
+          <option value="Studio Art">Studio Art</option>
+          <option value="Study Of Christianity And Culture">Study Of Christianity And Culture</option>
+          <option value="Sustainability Studies">Sustainability Studies</option>
+          <option value="Urban Studies And Planning">Urban Studies And Planning</option>
+          <option value="Women’S And Gender Studies">Women’S And Gender Studies</option>
+          <option value="Writing For The Screen And Stage">Writing For The Screen And Stage</option>
         </select>
       </label>
       <label class="item item-input item-select" for="userDoubleMinor">
@@ -386,86 +381,86 @@
         </div>
         <select name="userDoubleMinor" ng-model="userDoubleMinor" class="form-control" />
           <option disabled value=""></option>
-          <option value="aerospace studies">Aerospace studies</option>
-          <option value="african american and diaspora studies">African American and diaspora studies</option>
-          <option value="african studies">African studies</option>
-          <option value="american indian and indigenous studies">American Indian and indigenous studies</option>
-          <option value="american studies">American studies</option>
-          <option value="anthropology">Anthropology</option>
-          <option value="arabic">Arabic</option>
-          <option value="archaeology">Archaeology</option>
-          <option value="art history">Art history</option>
-          <option value="asian studies">Asian studies</option>
-          <option value="astronomy">Astronomy</option>
-          <option value="biology">Biology</option>
-          <option value="business administration">Business administration</option>
-          <option value="chemistry">Chemistry</option>
-          <option value="chinese">Chinese</option>
-          <option value="classical humanities">Classical humanities</option>
-          <option value="coaching education">Coaching education</option>
-          <option value="cognitive science">Cognitive science</option>
-          <option value="comparative literature">Comparative literature</option>
-          <option value="composition, rhetoric, and digital literacy">Composition, rhetoric, and digital literacy</option>
-          <option value="computer science">Computer science</option>
-          <option value="creative writing">Creative writing</option>
-          <option value="dramatic art">Dramatic art</option>
-          <option value="education">Education</option>
-          <option value="english">English</option>
-          <option value="entrepreneurship">Entrepreneurship</option>
-          <option value="environmental science and studies">Environmental science and studies</option>
-          <option value="exercise and sport science">Exercise and sport science</option>
-          <option value="folklore">Folklore</option>
-          <option value="french">French</option>
-          <option value="geography">Geography</option>
-          <option value="geology">Geology</option>
-          <option value="german">German</option>
-          <option value="global cinema">Global cinema</option>
-          <option value="greek">Greek</option>
-          <option value="hindi-urdu">Hindi-Urdu</option>
-          <option value="hispanic studies">Hispanic studies</option>
-          <option value="history">History</option>
-          <option value="information systems">Information systems</option>
-          <option value="international american studies">International American studies</option>
-          <option value="islamic and middle eastern studies">Islamic and Middle Eastern studies</option>
-          <option value="italian">Italian</option>
-          <option value="japanese">Japanese</option>
-          <option value="jewish studies">Jewish studies</option>
-          <option value="korean">Korean</option>
-          <option value="latin">Latin</option>
-          <option value="latina/o studies">Latina/o studies</option>
-          <option value="linguistics">Linguistics</option>
-          <option value="marine sciences">Marine sciences</option>
-          <option value="mathematical decision sciences">Mathematical decision sciences</option>
-          <option value="mathematics">Mathematics</option>
-          <option value="media and journalism">Media and journalism</option>
-          <option value="medical anthropology">Medical anthropology</option>
-          <option value="medicine, literature, and culture">Medicine, literature, and culture</option>
-          <option value="medieval and early modern studies">Medieval and early modern studies</option>
-          <option value="military science">Military science</option>
-          <option value="modern hebrew">Modern Hebrew</option>
-          <option value="music">Music</option>
-          <option value="naval science">Naval science</option>
-          <option value="neuroscience">Neuroscience</option>
-          <option value="philosophy">Philosophy</option>
-          <option value="philosophy, politics, and economics">Philosophy, politics, and economics</option>
-          <option value="physics">Physics</option>
-          <option value="portuguese">Portuguese</option>
-          <option value="public policy">Public policy</option>
-          <option value="recreation administration">Recreation administration</option>
-          <option value="religious studies">Religious studies</option>
-          <option value="russian culture">Russian culture</option>
-          <option value="sexuality studies">Sexuality studies</option>
-          <option value="slavic and east european cultures">Slavic and East European cultures</option>
-          <option value="social and economic justice">Social and economic justice</option>
-          <option value="southern studies">Southern studies</option>
-          <option value="spanish for the professions">Spanish for the professions</option>
-          <option value="speech and hearing sciences">Speech and hearing sciences</option>
-          <option value="studio art">Studio art</option>
-          <option value="study of christianity and culture">Study of Christianity and culture</option>
-          <option value="sustainability studies">Sustainability studies</option>
-          <option value="urban studies and planning">Urban studies and planning</option>
-          <option value="women’s and gender studies">Women’s and gender studies</option>
-          <option value="writing for the screen and stage">Writing for the screen and stage</option>
+          <option value="Aerospace Studies">Aerospace Studies</option>
+          <option value="African American And Diaspora Studies">African American And Diaspora Studies</option>
+          <option value="African Studies">African Studies</option>
+          <option value="American Indian And Indigenous Studies">American Indian And Indigenous Studies</option>
+          <option value="American Studies">American Studies</option>
+          <option value="Anthropology">Anthropology</option>
+          <option value="Arabic">Arabic</option>
+          <option value="Archaeology">Archaeology</option>
+          <option value="Art History">Art History</option>
+          <option value="Asian Studies">Asian Studies</option>
+          <option value="Astronomy">Astronomy</option>
+          <option value="Biology">Biology</option>
+          <option value="Business Administration">Business Administration</option>
+          <option value="Chemistry">Chemistry</option>
+          <option value="Chinese">Chinese</option>
+          <option value="Classical Humanities">Classical Humanities</option>
+          <option value="Coaching Education">Coaching Education</option>
+          <option value="Cognitive Science">Cognitive Science</option>
+          <option value="Comparative Literature">Comparative Literature</option>
+          <option value="Composition, Rhetoric, And Digital Literacy">Composition, Rhetoric, And Digital Literacy</option>
+          <option value="Computer Science">Computer Science</option>
+          <option value="Creative Writing">Creative Writing</option>
+          <option value="Dramatic Art">Dramatic Art</option>
+          <option value="Education">Education</option>
+          <option value="English">English</option>
+          <option value="Entrepreneurship">Entrepreneurship</option>
+          <option value="Environmental Science And Studies">Environmental Science And Studies</option>
+          <option value="Exercise And Sport Science">Exercise And Sport Science</option>
+          <option value="Folklore">Folklore</option>
+          <option value="French">French</option>
+          <option value="Geography">Geography</option>
+          <option value="Geology">Geology</option>
+          <option value="German">German</option>
+          <option value="Global Cinema">Global Cinema</option>
+          <option value="Greek">Greek</option>
+          <option value="Hindi-Urdu">Hindi-Urdu</option>
+          <option value="Hispanic Studies">Hispanic Studies</option>
+          <option value="History">History</option>
+          <option value="Information Systems">Information Systems</option>
+          <option value="International American Studies">International American Studies</option>
+          <option value="Islamic And Middle Eastern Studies">Islamic And Middle Eastern Studies</option>
+          <option value="Italian">Italian</option>
+          <option value="Japanese">Japanese</option>
+          <option value="Jewish Studies">Jewish Studies</option>
+          <option value="Korean">Korean</option>
+          <option value="Latin">Latin</option>
+          <option value="Latina/O Studies">Latina/O Studies</option>
+          <option value="Linguistics">Linguistics</option>
+          <option value="Marine Sciences">Marine Sciences</option>
+          <option value="Mathematical Decision Sciences">Mathematical Decision Sciences</option>
+          <option value="Mathematics">Mathematics</option>
+          <option value="Media And Journalism">Media And Journalism</option>
+          <option value="Medical Anthropology">Medical Anthropology</option>
+          <option value="Medicine, Literature, And Culture">Medicine, Literature, And Culture</option>
+          <option value="Medieval And Early Modern Studies">Medieval And Early Modern Studies</option>
+          <option value="Military Science">Military Science</option>
+          <option value="Modern Hebrew">Modern Hebrew</option>
+          <option value="Music">Music</option>
+          <option value="Naval Science">Naval Science</option>
+          <option value="Neuroscience">Neuroscience</option>
+          <option value="Philosophy">Philosophy</option>
+          <option value="Philosophy, Politics, And Economics">Philosophy, Politics, And Economics</option>
+          <option value="Physics">Physics</option>
+          <option value="Portuguese">Portuguese</option>
+          <option value="Public Policy">Public Policy</option>
+          <option value="Recreation Administration">Recreation Administration</option>
+          <option value="Religious Studies">Religious Studies</option>
+          <option value="Russian Culture">Russian Culture</option>
+          <option value="Sexuality Studies">Sexuality Studies</option>
+          <option value="Slavic And East European Cultures">Slavic And East European Cultures</option>
+          <option value="Social And Economic Justice">Social And Economic Justice</option>
+          <option value="Southern Studies">Southern Studies</option>
+          <option value="Spanish For The Professions">Spanish For The Professions</option>
+          <option value="Speech And Hearing Sciences">Speech And Hearing Sciences</option>
+          <option value="Studio Art">Studio Art</option>
+          <option value="Study Of Christianity And Culture">Study Of Christianity And Culture</option>
+          <option value="Sustainability Studies">Sustainability Studies</option>
+          <option value="Urban Studies And Planning">Urban Studies And Planning</option>
+          <option value="Women’S And Gender Studies">Women’S And Gender Studies</option>
+          <option value="Writing For The Screen And Stage">Writing For The Screen And Stage</option>
         </select>
       </label>
       <label class="item item-input" for="academicInterests">
@@ -481,15 +476,15 @@
       <h4 style="text-align:center; margin-top:15px; margin-bottom:15px;">Contact</h4>
       <label class="item item-input item-stacked-label" for="phoneNum">
         <span class="input-label">Phone Number</span>
-        <input type="text" placeholder="xxx-xxx-xxxx" name="phoneNum" ng-model="phoneNum" class="form-control" />
+        <input style="background-color : #F1F1F2;" type="text" placeholder="xxx-xxx-xxxx" name="phoneNum" ng-model="phoneNum" class="form-control" />
       </label>
       <label class="item item-input item-stacked-label" for="personalEmail">
         <span class="input-label">Personal Email</span>
-        <input type="text" placeholder="email@email.com" name="personalEmail" ng-model="personalEmail" class="form-control" />
+        <input style="background-color : #F1F1F2;" type="text" placeholder="email@email.com" name="personalEmail" ng-model="personalEmail" class="form-control" />
       </label>
       <label class="item item-input item-stacked-label" for="linkedIn">
         <span class="input-label">LinkedIn</span>
-        <input type="text" placeholder="LinkedIn" name="linkedIn" ng-model="linkedIn" class="form-control" />
+        <input style="background-color : #F1F1F2;" type="text" placeholder="LinkedIn" name="linkedIn" ng-model="linkedIn" class="form-control" />
       </label>
     </div>
 
@@ -498,37 +493,36 @@
       <h4 style="text-align:center; margin-top:15px; margin-bottom:15px;">Social Media</h4>
       <label class="item item-input item-stacked-label" for="facebook">
         <span class="input-label">Facebook</span>
-        <input type="text" placeholder="Facebook" name="facebook" ng-model="facebook" class="form-control" />
+        <input style="background-color : #F1F1F2;" type="text" placeholder="Facebook" name="facebook" ng-model="facebook" class="form-control" />
       </label>
       <label class="item item-input item-stacked-label" for="twitter">
         <span class="input-label">Twitter</span>
-        <input type="text" placeholder="@" name="twitter" ng-model="twitter" class="form-control" />
+        <input style="background-color : #F1F1F2;" type="text" placeholder="@" name="twitter" ng-model="twitter" class="form-control" />
       </label>
       <label class="item item-input item-stacked-label" for="instagram">
         <span class="input-label">Instagram</span>
-        <input type="text" placeholder="Instagram" name="instagram" ng-model="instagram" class="form-control" />
+        <input style="background-color : #F1F1F2;" type="text" placeholder="Instagram" name="instagram" ng-model="instagram" class="form-control" />
       </label>
       <label class="item item-input item-stacked-label" for="snapchat">
         <span class="input-label">SnapChat</span>
-        <input type="text" placeholder="SnapChat" name="snapchat" ng-model="snapchat" class="form-control" />
+        <input style="background-color : #F1F1F2;" type="text" placeholder="SnapChat" name="snapchat" ng-model="snapchat" class="form-control" />
       </label>
     </div>
 
-    <button ng-click="profileUpdate(updateUserProfile)" class="button button-block button-positive">Update</button>
-
+    <button ng-click="profileUpdate(updateUserProfile)" class="button button-block button-assertive">Update</button>
   </form>
 
 </div>
 
-<div ng-controller="CameraController">
+<!-- <div ng-controller="CameraController">
   <form name="uploadUserImg">
     <div class="row no-padding">
       <div class="col no-padding">
-        <button ng-click="takePicture(userTakenPicture)" class="button button-block button-positive">Take New Photo</button>
+        <button ng-click="takePicture(userTakenPicture)" class="button button-block button-assertive">Take New Photo</button>
       </div>
       <div class="col no-padding">
-        <button ng-click="getFromPhotoLibrary(userUploadPicture)" class="button button-block button-positive">Upload Photo</button>
+        <button ng-click="getFromPhotoLibrary(userUploadPicture)" class="button button-block button-assertive">Upload Photo</button>
       </div>
     </div>
   </form>
-</div>
+</div> -->

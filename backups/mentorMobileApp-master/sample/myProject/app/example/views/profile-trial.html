@@ -1,0 +1,23 @@
+<div ng-controller="Profile">
+  <!-- took out class="padding" -->
+
+  <super-navbar>
+    <super-navbar-title>
+      Settings
+    </super-navbar-title>
+  </super-navbar>
+
+  <div ng-app="scopeExample">
+    <div class="show-scope-demo">
+    <div ng-controller="GreetController">
+      Hello {{name}}!
+    </div>
+    <div ng-controller="ListController">
+      <ol>
+        <li ng-repeat="name in names">{{name}} from {{department}}</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+</div>

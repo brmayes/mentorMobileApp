@@ -1,0 +1,69 @@
+/*GENERAL*/
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+.display-none {
+  display: none;
+}
+
+.supersonic-navbar-mock {
+  background-color: #00B5FF !important;
+  text-align: center;
+  font-weight: 600;
+}
+
+/*PROFILE PAGE SETTING*/
+.userProfilePicture {
+  /*margin: 0 auto;*/
+  display: block;
+  width: 100%;
+  heigh: auto;
+  /*border-radius: 50%;*/
+  /*margin-top: 10px;*/
+}
+
+.profilePicture {
+  padding: 0 0 !important;
+  margin: 0 !important;
+}
+
+.userProfileName, .userProfileMajor, .userProfileClass, .userProfileRoleTeam {
+  text-align: left;
+}
+
+.userProfileBio {
+  min-height: 100px;
+}
+
+.profileTabsRow {
+  margin: auto 0;
+  text-align: center;
+}
+
+.profileTabs {
+  /*border: 1px solid black;*/
+  height: 50px;
+}
+
+.profileTabsLeft {
+  /*border-top: 3px solid black;*/
+  border-botom: 3px solid black;
+  height: 50px;
+}
+
+.profileTabsDivs {
+  min-height: 224px;
+}
+
+.editProfileMargin {
+  margin-bottom: 45px;
+}

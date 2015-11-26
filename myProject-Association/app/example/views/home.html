@@ -1,0 +1,33 @@
+<div class="padding">
+
+  <super-navbar>
+    <super-navbar-title>
+      Home
+    </super-navbar-title>
+  </super-navbar>
+
+  <script>
+  //CHOOSING HOME VS. MODAL LOG IN SCREEN
+    var currentUser = Parse.User.current();
+      if (currentUser) {
+          // do stuff with the user
+          supersonic.ui.View("example#home");
+          //THIS CODE ACTUALLY FINALLY WORKED!!!!
+      } else {
+          // show the signup or login page
+          var modalView = new supersonic.ui.View("example#getting-started");
+          var options = {
+          animate: true
+          }
+          supersonic.ui.modal.show(modalView, options);
+      }
+  </script>
+
+<H3>this is the home page</H3>
+ <h1>Logout</h1>
+
+ <div ng-controller="FormController">
+     <button ng-click="logOut()" class="button button-block button-positive icon-left super-log-out">Log Out</button>
+ </div>
+
+</div>
