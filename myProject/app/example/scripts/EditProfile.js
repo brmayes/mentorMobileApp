@@ -35,11 +35,12 @@ angular
     // }
 
     $scope.profileUpdate = function(updateUserProfile) {
-      user.set("userFirstName", $scope.firstName);
-      user.set("userLastName", $scope.lastName);
+      user.set("firstName", $scope.firstName);
+      user.set("lastName", $scope.lastName);
 
       //bio
       user.set("userBio", $scope.bio);
+      user.set("hometown", $scope.userHometown);
 
       //academics
       user.set("userTeamNum", $scope.teamNum);
@@ -54,13 +55,11 @@ angular
       //contact
       user.set("userPhoneNum", $scope.phoneNum);
       user.set("userPersonalEmail", $scope.personalEmail);
-      user.set("userLinkedIn", $scope.linkedIn);
 
       //social
       user.set("userFacebook", $scope.facebook);
       user.set("userTwitter", $scope.twitter);
       user.set("userInstagram", $scope.instagram);
-      user.set("userSnapChat", $scope.snapchat);
 
       user.save(null, {
         success: function(user) {
@@ -69,11 +68,8 @@ angular
 
           user.fetch({
             success: function(user) {
-              alert("pushed");
-              var userBio = Parse.User.current().escape("userBio");
-              supersonic.logger.info(userBio);
-              document.getElementById("userBio").innerHTML = "userBio";
-
+              var view = new supersonic.ui.View("example#profile");
+              supersonic.ui.layers.push(view);
             },
             error: function(user, error) {
               alert("not pushed");

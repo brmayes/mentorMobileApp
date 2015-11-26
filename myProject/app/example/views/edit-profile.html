@@ -9,9 +9,13 @@
   <h4 style="text-align:center; margin-top:15px; margin-bottom:15px;">Basic Information</h4>
   <form name="editUserProfile">
     <div class="form-group list">
-      <label class="item item-input item-stacked-label" for="userName">
-        <span class="input-label">Full Name</span>
-        <input style="background-color : #F1F1F2;" type="text" placeholder="First and Last Name" name="userName" ng-model="userName" class="form-control" required />
+      <label class="item item-input item-stacked-label" for="firstName">
+        <span class="input-label">First Name</span>
+        <input style="background-color : #F1F1F2;" type="text" placeholder="First Name" name="firstName" ng-model="firstName" class="form-control" required />
+      </label>
+      <label class="item item-input item-stacked-label" for="lastName">
+        <span class="input-label">Last Name</span>
+        <input style="background-color : #F1F1F2;" type="text" placeholder="Last Name" name="lastName" ng-model="lastName" class="form-control" required />
       </label>
       <label class="item item-input item-stacked-label" for="userEmail">
         <span class="input-label">Email Address</span>
@@ -21,9 +25,16 @@
         <span class="input-label">Password</span>
         <input style="background-color : #F1F1F2;" type="text" placeholder="Password" name="userPass" ng-model="userPass" class="form-control" required />
       </label>
-      <label class="item item-input item-stacked-label" for="userRole">
-        <span class="input-label">Role</span>
-        <input style="background-color : #F1F1F2;" type="text" placeholder="Role" name="userPass" ng-model="userPass" class="form-control" required />
+      <label class="item item-input item-select" for="userRole">
+        <div class="input-label">
+          Role
+        </div>
+        <select required name="userRole" ng-model="userRole" class="form-control" />
+          <option disabled selected value=""></option>
+          <option value="Mentee">Mentee</option>
+          <option value="Mentor">Mentor</option>
+          <option value="Administrator">Administrator</option>
+        </select>
       </label>
       <label class="item item-input item-select" for="teamNum">
         <div class="input-label">
@@ -52,6 +63,10 @@
       <h4 style="text-align:center; margin-top:15px; margin-bottom:15px;">Personal</h4>
       <label class="item item-input" for="bio">
         <textarea name="bio" ng-model="bio" placeholder="Write a little about yourself..."></textarea>
+      </label>
+      <label class="item item-input item-stacked-label" for="userHometown">
+        <span class="input-label">Hometown</span>
+        <input style="background-color : #F1F1F2;" type="text" placeholder="Chapel Hill, NC" name="userHometown" ng-model="userHometown" class="form-control" required />
       </label>
     </div>
 
@@ -127,7 +142,7 @@
           <option value="Religious Studies (Including Jewish Studies)">Religious Studies (Including Jewish Studies)</option>
           <option value="Romance Languages And Literatures (Including French, Italian, Hispanic Linguistics, Hispanic Literature And Cultures, And Portuguese)">Romance Languages And Literatures (Including French, Italian, Hispanic Linguistics, Hispanic Literature And Cultures, And Portuguese)</option>
           <option value="Sexuality Studies">Sexuality Studies</option>
-          <option value="Women’S And Gender Studies">Women’S And Gender Studies</option>
+          <option value="Women’s And Gender Studies">Women’s And Gender Studies</option>
           <option value="Writing For The Screen And Stage">Writing For The Screen And Stage</option>
           <option disabled value="Media And Journalism">Media And Journalism</option>
           <option value="Advertising">Advertising</option>
@@ -236,7 +251,7 @@
         <option value="Religious Studies (Including Jewish Studies)">Religious Studies (Including Jewish Studies)</option>
         <option value="Romance Languages And Literatures (Including French, Italian, Hispanic Linguistics, Hispanic Literature And Cultures, And Portuguese)">Romance Languages And Literatures (Including French, Italian, Hispanic Linguistics, Hispanic Literature And Cultures, And Portuguese)</option>
         <option value="Sexuality Studies">Sexuality Studies</option>
-        <option value="Women’S And Gender Studies">Women’S And Gender Studies</option>
+        <option value="Women’s And Gender Studies">Women’s And Gender Studies</option>
         <option value="Writing For The Screen And Stage">Writing For The Screen And Stage</option>
         <option disabled value="Media And Journalism">Media And Journalism</option>
         <option value="Advertising">Advertising</option>
@@ -371,7 +386,7 @@
           <option value="Study Of Christianity And Culture">Study Of Christianity And Culture</option>
           <option value="Sustainability Studies">Sustainability Studies</option>
           <option value="Urban Studies And Planning">Urban Studies And Planning</option>
-          <option value="Women’S And Gender Studies">Women’S And Gender Studies</option>
+          <option value="Women’s And Gender Studies">Women’s And Gender Studies</option>
           <option value="Writing For The Screen And Stage">Writing For The Screen And Stage</option>
         </select>
       </label>
@@ -459,7 +474,7 @@
           <option value="Study Of Christianity And Culture">Study Of Christianity And Culture</option>
           <option value="Sustainability Studies">Sustainability Studies</option>
           <option value="Urban Studies And Planning">Urban Studies And Planning</option>
-          <option value="Women’S And Gender Studies">Women’S And Gender Studies</option>
+          <option value="Women’s And Gender Studies">Women’s And Gender Studies</option>
           <option value="Writing For The Screen And Stage">Writing For The Screen And Stage</option>
         </select>
       </label>
@@ -482,10 +497,10 @@
         <span class="input-label">Personal Email</span>
         <input style="background-color : #F1F1F2;" type="text" placeholder="email@email.com" name="personalEmail" ng-model="personalEmail" class="form-control" />
       </label>
-      <label class="item item-input item-stacked-label" for="linkedIn">
+      <!-- <label class="item item-input item-stacked-label" for="linkedIn">
         <span class="input-label">LinkedIn</span>
         <input style="background-color : #F1F1F2;" type="text" placeholder="LinkedIn" name="linkedIn" ng-model="linkedIn" class="form-control" />
-      </label>
+      </label> -->
     </div>
 
       <!-- SOCIAL MEDIA INFORMATION -->
@@ -503,10 +518,10 @@
         <span class="input-label">Instagram</span>
         <input style="background-color : #F1F1F2;" type="text" placeholder="Instagram" name="instagram" ng-model="instagram" class="form-control" />
       </label>
-      <label class="item item-input item-stacked-label" for="snapchat">
+      <!-- <label class="item item-input item-stacked-label" for="snapchat">
         <span class="input-label">SnapChat</span>
         <input style="background-color : #F1F1F2;" type="text" placeholder="SnapChat" name="snapchat" ng-model="snapchat" class="form-control" />
-      </label>
+      </label> -->
     </div>
 
     <button ng-click="profileUpdate(updateUserProfile)" class="button button-block button-assertive">Update</button>
