@@ -10,30 +10,6 @@ angular
     var profilePictureURL = user.escape("profilePicture");
     var profilePicture = "<img class='userProfilePicture' src='" + profilePictureURL + "'>";
 
-    // //bringing user's name, major and class in
-    // document.getElementById("userProfileName").innerHTML = currentUserName;
-    // document.getElementById("profilePicture").innerHTML = profilePicture;
-    //
-    // //switcher operation
-    // $scope.state = "PERSONAL";
-    //
-    // $scope.profilePersonal = function() {
-    //   $scope.state = "PERSONAL";
-    //   supersonic.logger.info("personal");
-    // }
-    // $scope.profileAcademics = function() {
-    //   $scope.state = "ACADEMICS";
-    //   supersonic.logger.info("academics");
-    // }
-    // $scope.profileContact = function() {
-    //   $scope.state = "CONTACT";
-    //   supersonic.logger.info("contact");
-    // }
-    // $scope.profileConnect = function() {
-    //   $scope.state = "CONNECT";
-    //   supersonic.logger.info("connect");
-    // }
-
     $scope.profileUpdate = function(updateUserProfile) {
       user.set("firstName", $scope.firstName);
       user.set("lastName", $scope.lastName);

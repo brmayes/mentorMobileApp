@@ -40,6 +40,8 @@ angular
     var facebookURLLabel;
     var twitterURLLabel;
     var instagramURLLabel;
+    var profilePicture;
+    var profilePictureURL;
 
     document.getElementById("profilePicture").innerHTML = profilePicture;
 
@@ -86,6 +88,8 @@ angular
         instagram = user.get("userInstagram");
           instagramURL = "<a href='http://instagram.com/" + instagram + "'>" + instagram + "</a>";
           instagramURLLabel = "<span class='profileLabel'>Instagram:</span> " + instagramURL;
+        profilePictureURL = user.get("profilePicture");
+          profilePicture = "<img class='userProfilePicture' src='" + profilePictureURL + "'>";
 
 
         if (doubleMajor !== undefined) {
@@ -111,6 +115,8 @@ angular
         document.getElementById("facebook").innerHTML = facebookURLLabel;
         document.getElementById("twitter").innerHTML = twitterURLLabel;
         document.getElementById("instagram").innerHTML = instagramURLLabel;
+        document.getElementById("profilePicture").innerHTML = profilePicture;
+
 
       },
       error: function(error) {
