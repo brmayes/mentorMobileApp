@@ -34,16 +34,16 @@
 <!-- TABS  -->
 <div class="row profileTabsRow">
   <div class="col profileTabs">
-    <button ng-click="profileAcademics()" class="button button-icon">ACADEMICS</button>
+    <button ng-click="profileAcademics()" class="button button-icon bold">ACADEMICS</button>
   </div>
   <div class="col profileTabs">
-    <button ng-click="profileConnect()" class="button button-icon">CONNECT</button>
+    <button ng-click="profileConnect()" class="button button-icon bold">CONNECT</button>
   </div>
 </div>
 <!-- INSERT USER INFORMATION HERE -->
 <div class="profileTabsDivs padding">
-    <div ng-show="state == 'ACADEMICS'">
-      <p>
+    <div id="academicTab" class="activeTab" ng-show="state == 'ACADEMICS'">
+      <p class="tab-title">
         ACADEMIC INFORMATION
       </p>
       <p id="classStatus"></p>
@@ -52,15 +52,16 @@
       <p id="primaryMinor"></p>
       <p id="doubleMinor"></p>
       <p id="academicInterests"></p>
-      <p id="campusInvolement"></p>
+      <p id="campusInvolvement"></p>
     </div>
-    <div ng-show="state == 'CONNECT'">
-      <p>
+    <div id="connectTab" class="activeTab" ng-show="state == 'CONNECT'">
+      <p class="tab-title">
         CONNECT INFORMATION
       </p>
+      <p id="hometown"></p>
       <p id="phoneNum"></p>
       <p id="personalEmail"></p>
-      <p id="facebook"></p>
+      <p ng-click="facebookModal()" id="facebook"></p>
       <p id="twitter"></p>
       <p id="instagram"></p>
     </div>
