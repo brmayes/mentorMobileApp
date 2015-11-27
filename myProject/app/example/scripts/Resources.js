@@ -1,10 +1,7 @@
 angular
   .module('example')
-  .controller('CameraController', function($scope) {
-
-    var user = Parse.User.current();
-    var userId = Parse.User.current().id;
-    var userImg;
+  .controller('Resources', function($scope, supersonic) {
+    //$scope.navbarTitle = "Settings";
 
     $(function() {
         var file;
@@ -33,25 +30,7 @@ angular
             contentType: false,
             success: function(data) {
               alert("File available at: ", data.url);
-              userImg = data.url;
-              supersonic.logger.info(userImg);
-
-              var user = Parse.User.current();
-              user.set("profilePicture", userImg);
-
-              user.save(null, {
-                success: function(user) {
-                  user.save();
-                  alert("Updated!");
-
-                  var profilePictureURL = user.escape("profilePicture");
-                  var profilePicture = "<img class='userProfilePicture' src='" + profilePictureURL + "'>";
-                  document.getElementById('profilePicture') = profilePicture;
-                },
-                error: function (user, error) {
-                  alert("WOAH. Something went wrong! Try again?");
-                }
-              });
+              supersonic.logger.info(data.url);
             },
             error: function(data) {
               var obj = jQuery.parseJSON(data);
@@ -61,10 +40,6 @@ angular
         });
 
 
-
-
       });
-
-
 
   });

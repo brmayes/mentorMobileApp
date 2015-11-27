@@ -28,7 +28,7 @@ module.exports =
     {
       title: "Resources"
       id: "resources"
-      location: "http://google.com" # URLs are supported!
+      location: "example#resources" # URLs are supported!
     }
     {
       title: "Chat"

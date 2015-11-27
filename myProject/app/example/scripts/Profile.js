@@ -57,35 +57,35 @@ angular
         teamNum = user.get("userTeamNum");
           roleTeam = role + " - Team " + teamNum;
         classStatus = user.get("userClassStatus");
-          classStatusLabel = "Class status: " + classStatus;
+          classStatusLabel = "<span class='profileLabel'>Class status:</span> " + classStatus;
         bio = user.get("userBio");
         hometown = user.get("hometown");
-          hometownLabel = "Hometown: " + hometown;
+          hometownLabel = "<span class='profileLabel'>Hometown:</span> " + hometown;
         primaryMajor = user.get("userMajor");
-          primaryMajorLabel = "Major: " + primaryMajor;
+          primaryMajorLabel = "<span class='profileLabel'>Major:</span> " + primaryMajor;
         doubleMajor = user.get("userDoubleMajor");
-          doubleMajorLabel = "Double major: " + doubleMajor;
+          doubleMajorLabel = "<span class='profileLabel'>Double major:</span> " + doubleMajor;
         primaryMinor = user.get("userMinor");
-          primaryMinorLabel = "Minor: " + primaryMinor;
+          primaryMinorLabel = "<span class='profileLabel'>Minor:</span> " + primaryMinor;
         doubleMinor = user.get("userDoubleMinor");
-          doubleMinorLabel = "Double minor: " + doubleMinor;
+          doubleMinorLabel = "<span class='profileLabel'>Double minor:</span> " + doubleMinor;
         academicInterests = user.get("userAcademicInterests");
-          academicInterestsLabel = "Academic interests: " + academicInterests;
+          academicInterestsLabel = "<span class='profileLabel'>Academic interests:</span> " + academicInterests;
         campusInvolvement = user.get("userCampusInvolvement");
-          campusInvolvementLabel = "Campus involvement: " + campusInvolvement;
+          campusInvolvementLabel = "<span class='profileLabel'>Campus involvement:</span> " + campusInvolvement;
         phoneNum = user.get("userPhoneNum");
-          phoneNumLabel = "Phone number: " + phoneNum;
+          phoneNumLabel = "<span class='profileLabel'>Phone number:</span> " + phoneNum;
         personalEmail = user.get("userPersonalEmail");
-          personalEmailLabel = "Personal email: " + personalEmail;
+          personalEmailLabel = "<span class='profileLabel'>Personal email:</span> " + personalEmail;
         facebook = user.get("userFacebook");
           facebookURL = "<a href='http://facebook.com/" + facebook + "'>" + facebook + "</a>";
-          facebookURLLabel = "Facebook: " + facebookURL;
+          facebookURLLabel = "<span class='profileLabel'>Facebook:</span> " + facebookURL;
         twitter = user.get("userTwitter");
           twitterURL = "<a href='http://twitter.com/" + twitter + "'>" + twitter + "</a>";
-          twitterURLLabel = "Twitter: " + twitterURL;
+          twitterURLLabel = "<span class='profileLabel'>Twitter:</span> " + twitterURL;
         instagram = user.get("userInstagram");
           instagramURL = "<a href='http://instagram.com/" + instagram + "'>" + instagram + "</a>";
-          instagramURLLabel = "Instagram: " + instagramURL;
+          instagramURLLabel = "<span class='profileLabel'>Instagram:</span> " + instagramURL;
 
 
         if (doubleMajor !== undefined) {

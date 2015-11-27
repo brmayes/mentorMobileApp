@@ -90,8 +90,28 @@
   font-weight: 500;
 }
 
+.profileLabel {
+  font-weight: 700;
+}
 
+.resources-col {
+  text-align: center;
+}
 
+.resources-icon {
+  max-width: 100px;
+  margin: 0 auto;
+  display: block;
+}
+
+.resources-title {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.resources-date {
+  margin-top: 0;
+}
 
 /*.userProfileName, .userProfileMajor, .userProfileClass, .userProfileRoleTeam {
   text-align: left;
