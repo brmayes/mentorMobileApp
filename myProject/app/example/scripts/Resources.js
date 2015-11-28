@@ -29,8 +29,8 @@ angular
             processData: false,
             contentType: false,
             success: function(data) {
-              alert("File available at: ", data.url);
-              supersonic.logger.info(data.url);
+              alert("Thank you for your submission. Your file will need to be reviewed " +
+              "and approved by an administrator. To review your file, please visit: " + data.url);
             },
             error: function(data) {
               var obj = jQuery.parseJSON(data);

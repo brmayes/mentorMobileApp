@@ -33,7 +33,7 @@ module.exports =
     {
       title: "Chat"
       id: "chat"
-      location: "http://gmail.com" # URLs are supported!
+      location: "example#chat" # URLs are supported!
     }
   ]
 

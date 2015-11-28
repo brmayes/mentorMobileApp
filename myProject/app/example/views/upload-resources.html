@@ -1,16 +1,24 @@
-<div ng-controller="Resources">
+<div ng-controller="Resources" class="no-padding no-border">
 <super-navbar>
   <super-navbar-title>
     Upload
   </super-navbar-title>
 </super-navbar>
 
-<form id="fileupload" name="fileupload" enctype="multipart/form-data" method="post">
-  <fieldset>
-    <input type="file" name="fileselect" id="fileselect"></input>
-    <input id="uploadbutton" type="button" value="Upload to Parse"/>
-  </fieldset>
-</form>
+<div class="padding">
+  <form id="fileupload" name="fileupload" enctype="multipart/form-data" method="post">
+      <label class="item item-input item-stacked-label" for="fileName">
+        <span class="input-label">File Name</span>
+        <input style="background-color : #F1F1F2;" type="text" placeholder="File Name" name="fileName" ng-model="fileName" class="form-control" required />
+      </label>
+      <label class="item item-input" for="description">
+        <textarea name="description" ng-model="description" placeholder="Description"></textarea>
+      </label>
+      <input type="file" name="fileselect" id="fileselect"></input>
+      <input id="uploadbutton" type="button" value="Upload to Parse" class="button button-block button-assertive"/>
+  </form>
+</div>
+
 
 
 
