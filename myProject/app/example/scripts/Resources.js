@@ -31,6 +31,7 @@ angular
             success: function(data) {
               alert("Thank you for your submission. Your file will need to be reviewed " +
               "and approved by an administrator. To review your file, please visit: " + data.url);
+
             },
             error: function(data) {
               var obj = jQuery.parseJSON(data);

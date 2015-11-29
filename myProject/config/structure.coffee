@@ -23,7 +23,7 @@ module.exports =
     {
       title: "Calendar"
       id: "calendar"
-      location: "example#settings"
+      location: "example#calendar"
     }
     {
       title: "Resources"

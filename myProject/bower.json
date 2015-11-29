@@ -8,6 +8,7 @@
     "jquery": "2.1.4",
     "parse": "1.6.7",
     "bootstrap": "3.3.5",
-    "Ionicons": "2.0.1"
+    "Ionicons": "2.0.1",
+    "fullcalendar": "2.4.0"
   }
 }
