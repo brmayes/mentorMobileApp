@@ -68,7 +68,7 @@ angular
     			},
 
     			error: function(error) {
-    				alert("Error: " + error.code + " " + error.message + ".");
+    				supersonic.logger.info("Error: " + error.code + " " + error.message + ".");
     			}
     		})
     	}
