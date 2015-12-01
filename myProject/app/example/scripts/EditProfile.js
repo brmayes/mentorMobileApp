@@ -61,4 +61,19 @@ angular
       });
 
     }
+
+    //LOG OUT BUTTON FUNCTION
+    $scope.logOut = function(logOutButton){
+      Parse.User.logOut();
+      var currentUser = Parse.User.current();  // this will now be null
+
+      var modalView = new supersonic.ui.View("example#getting-started");
+      var options = {
+        animate: true
+      }
+
+      supersonic.ui.modal.show(modalView, options);
+
+    };
+
   });

@@ -42,6 +42,9 @@ angular
     var instagramURLLabel;
     var profilePicture;
     var profilePictureURL;
+    var facebookLink;
+    var instagramLink;
+    var twitterLink;
 
     document.getElementById("profilePicture").innerHTML = profilePicture;
 
@@ -80,12 +83,15 @@ angular
         personalEmail = user.get("userPersonalEmail");
           personalEmailLabel = "<span class='profileLabel'>Personal email:</span> " + personalEmail;
         facebook = user.get("userFacebook");
+          facebookLink = "http://facebook.com/" + facebook;
           facebookURL = "<a href='http://facebook.com/" + facebook + "'>" + facebook + "</a>";
           facebookURLLabel = "<span class='profileLabel'>Facebook:</span> " + facebookURL;
         twitter = user.get("userTwitter");
+          twitterLink = "http://twitter.com/" + twitter;
           twitterURL = "<a href='http://twitter.com/" + twitter + "'>" + twitter + "</a>";
           twitterURLLabel = "<span class='profileLabel'>Twitter:</span> " + twitterURL;
         instagram = user.get("userInstagram");
+          instagramLink = "http://instagram.com/" + instagram;
           instagramURL = "<a href='http://instagram.com/" + instagram + "'>" + instagram + "</a>";
           instagramURLLabel = "<span class='profileLabel'>Instagram:</span> " + instagramURL;
         profilePictureURL = user.get("profilePicture");
@@ -146,13 +152,28 @@ angular
       supersonic.ui.layers.push(view);
     }
 
-    // $scope.facebookModal = function(facebookModal) {
-    //   var modalView = new supersonic.ui.View(facebookURL);
-    //   var options = {
-    //   animate: true
-    //   }
-    //   supersonic.ui.modal.show(modalView, options);
-    // }
+    $scope.facebookModal = function(facebookModal) {
+      var modalView = new supersonic.ui.View(facebookURL);
+      var options = {
+      animate: true
+      }
+      supersonic.ui.modal.show(modalView, options);
+    }
+
+    $scope.facebookModal = function(facebookModal) {
+      var view = new supersonic.ui.View(facebookLink);
+      supersonic.ui.layers.push(view);
+    }
+
+    $scope.twitterModal = function(twitterModal) {
+      var view = new supersonic.ui.View(twitterLink);
+      supersonic.ui.layers.push(view);
+    }
+
+    $scope.instgramModal = function(instgramModal) {
+      var view = new supersonic.ui.View(instagramLink);
+      supersonic.ui.layers.push(view);
+    }
 
 
 

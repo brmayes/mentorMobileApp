@@ -14,11 +14,11 @@ module.exports =
       id: "profile"
       location: "example#profile"
     }
-    {
-      title: "Home"
-      id: "home"
-      location: "example#home" # Supersonic module#view type navigation
-    }
+    # {
+    #   title: "Home"
+    #   id: "home"
+    #   location: "example#home" # Supersonic module#view type navigation
+    # }
 
     {
       title: "Calendar"
