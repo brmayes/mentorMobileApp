@@ -1,6 +1,6 @@
 angular
   .module('example')
-  .controller('Calendar', function($scope) {
+  .controller('Calendar', function($scope, supersonic) {
     //
     // $(document).ready(function() {
     //
